@@ -43,22 +43,7 @@
 <!-- JavaScript for the test itself -->
 <script>
   
-    //Update This:
-    quiz_b = 18
-      
-    var max_care, max_fairness, max_loyalty; // Max possible scores
-    max_care = max_fairness = max_loyalty = 0;
-    var care, fairness, loyalty; // User's scores
-    care = fairness = loyalty = 0;
-    var qn = 0; // Question number
-    var prev_answer = null;
-    init_question();
-    for (var i = 0; i < questions.length; i++) {
-        max_care += Math.abs(questions[i].effect.care)
-        max_fairness += Math.abs(questions[i].effect.fairness)
-        max_loyalty += Math.abs(questions[i].effect.loyalty)
-    }
-    function init_question() {
+    function init_question(example) {
         document.getElementById("question-text").innerHTML = questions[qn].question;
         document.getElementById("question-number").innerHTML = "Question " + (qn + 1) + " of " + (questions.length +  quiz_b);
         if (prev_answer == null) {
@@ -70,36 +55,7 @@
         }
 
     }
-
-    function next_question(mult) {
-        care += mult*questions[qn].effect.care
-        fairness += mult*questions[qn].effect.fairness
-        loyalty += mult*questions[qn].effect.loyalty
-        
-        qn++;
-        prev_answer = mult;
-        if (qn < questions.length) {
-            init_question();
-        } else {
-            results();
-        }
-    }
-    function prev_question() {
-        if (prev_answer == null) {
-            return;
-        }
-        qn--;
-        care -= prev_answer * questions[qn].effect.care;
-        fairness -= prev_answer * questions[qn].effect.fairness;
-        loyalty -= prev_answer * questions[qn].effect.loyalty;
-        
-        prev_answer = null;
-        init_question();
-
-    }
-    function calc_score(score,max) {
-        return (100*(score/max)).toFixed(1)
-    }
+  
     function results() {
         location.href = `instructions2.html`
             + `?care=${calc_score(care,max_care)}`
