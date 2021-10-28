@@ -31,11 +31,8 @@
   
 <p class="question" id="question-text"></p>
  
-<button class="button" onclick="next_question(1.0)" style="background-color: #8B0000;"> <span class="material-icons">emoji_events</span> Deeply Important</button> <br>
-<button class="button" onclick="next_question(0.8)" style="background-color: #D2691E;"> <span class="material-icons">stars</span> Very Important</button> <br>
-<button class="button" onclick="next_question(0.6)" style="background-color: #DAA520;"> <span class="material-icons">error_outline</span> Somewhat Important</button> <br>
-<button class="button" onclick="next_question(0.4)" style="background-color: #978863;"> <span class="material-icons">help</span> Slightly Important</button> <br>
-<button class="button" onclick="next_question(0.2)" style="background-color: #808080;"> <span class="material-icons">highlight_off</span> Not Important at All</button> <br>
+<button class="button" onclick="init_question(currentq)" style="background-color: #8B0000;" id="button1"> <span class="material-icons">Button 1</button> <br>
+<button class="button" onclick="init_question(currentq)" style="background-color: #D2691E;" id="button2"> <span class="material-icons">Button 2</button> <br>
    
 <button class="small_button" onclick="prev_question()" id="back_button">Back</button>
 <button class="small_button_off" id="back_button_off">Back</button><br>
@@ -44,23 +41,22 @@
 <script>
   
     function init_question(example) {
-        document.getElementById("question-text").innerHTML = questions[qn].question;
-        document.getElementById("question-number").innerHTML = "Question " + (qn + 1) + " of " + (questions.length +  quiz_b);
-        if (prev_answer == null) {
-            document.getElementById("back_button").style.display = 'none';
-            document.getElementById("back_button_off").style.display = 'block';
+        if (example[6] = false) {
+            document.getElementById("question-text").innerHTML = example[1];
+            document.getElementById("button1").innerHTML = example[2];
+            document.getElementById("button2").innerHTML = example[3];
         } else {
-            document.getElementById("back_button").style.display = 'block';
-            document.getElementById("back_button_off").style.display = 'none';
+            results(example);
         }
 
     }
   
-    function results() {
-        location.href = `instructions2.html`
-            + `?care=${calc_score(care,max_care)}`
-            + `&fairness=${calc_score(fairness,max_fairness)}`
-            + `&loyalty=${calc_score(loyalty,max_loyalty)}`
+    // variable = [Question, Button 1 Text, Button 2 Text, Next Question if Button 1 Clicked, Next Question if Button 2 Clicked, Final question?]
+    example = ["This is a question", "Yes, indeed", "No, it isn't", test, q1, true]
+  
+    function results(example) {
+        location.href = `results.html`
+            + `?id=${example[4]}`
     }
 </script>
 </body>
