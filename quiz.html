@@ -28,7 +28,7 @@
 </div> 
 </div> -->
   
-<p class="question" id="question-text"></p>
+<p class="question" id="question-text">Test</p>
  
 <button class="button" onclick="init_question(example)" style="background-color: #8B0000;" id="button1"> Button 1</button> <br>
 <button class="button" onclick="init_question(example)" style="background-color: #D2691E;" id="button2"> Button 2</button> <br>
@@ -40,11 +40,11 @@
 <script>
     
     // variable = [Question, Button 1 Text, Button 2 Text, Next Question if Button 1 Clicked, Next Question if Button 2 Clicked, Final question?]
-    example = ["This is a question", "Yes, indeed", "No, it isn't", "test", q1, "true"];
+    example = ["This is a question", "Yes, indeed", "No, it isn't", "test", q1, "false"];
     q1 = ["Question 1", "Yes", "No", "test", example, example, "false"];
   
     function init_question(example) {
-        if (example[6] == "false") {
+        if (example[5] == "false") {
             document.getElementById("question-text").innerHTML = example[1];
             document.getElementById("button1").innerHTML = example[2];
             document.getElementById("button2").innerHTML = example[3];
