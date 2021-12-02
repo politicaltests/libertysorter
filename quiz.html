@@ -26,9 +26,6 @@
  
 <button class="button" onclick="init_question(q1)" style="background-color: #8B0000;" id="button1">-</button> <br>
 <button class="button" onclick="init_question(q1)" style="background-color: #D2691E;" id="button2">-</button> <br>
-   
-<button class="small_button" onclick="prev_question()" id="back_button">Back</button>
-<button class="small_button_off" id="back_button_off">Back</button><br>
 
 <!-- JavaScript for the test itself -->
 <script>
@@ -40,7 +37,7 @@
     q2 = ["Question 1", "Yes", "No", "true"];
   
     function init_question(q1) {
-        if (example[3] == "false") {
+        if (q1[3] == "false") {
             document.getElementById("question-text").innerHTML = q1[0];
             document.getElementById("button1").innerHTML = q1[1];
             document.getElementById("button2").innerHTML = q1[2];
