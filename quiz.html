@@ -50,7 +50,7 @@
             document.getElementById("question-text").innerHTML = example[0];
             document.getElementById("button1").innerHTML = example[1];
             document.getElementById("button2").innerHTML = example[2];
-            const example = example[3];
+            $("#button1").on("click",function() { init_question(example[3]); }
         } else {
             results(example);
         }
