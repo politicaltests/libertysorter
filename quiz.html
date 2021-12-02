@@ -40,15 +40,17 @@
 <script>
     
     // variable = [Question, Button 1 Text, Button 2 Text, Next Question if Button 1 Clicked, Next Question if Button 2 Clicked, Final question?]
-    example = ["This is a question", "Yes, indeed", "No, it isn't", "test", "q1", "false"];
-    q1 = ["Question 1", "Yes", "No", "test", "example", "example", "true"];
+    example = ["This is a question", "Yes, indeed", "No, it isn't", "false"];
+    array3.push(q1);
+  
+    q1 = ["Question 1", "Yes", "No", "true"];
   
     function init_question(example) {
         if (example[5] == "false") {
-            document.getElementById("question-text").innerHTML = example[1];
-            document.getElementById("button1").innerHTML = example[2];
-            document.getElementById("button2").innerHTML = example[3];
-            init_question(q1);
+            document.getElementById("question-text").innerHTML = example[0];
+            document.getElementById("button1").innerHTML = example[1];
+            document.getElementById("button2").innerHTML = example[2];
+            init_question(example[3]);
         } else {
             results(example);
         }
@@ -56,7 +58,7 @@
   
     function results(example) {
         location.href = `results.html`
-            + `?id=${example[4]}`
+            + `?id=${example[3]}`
     }
 </script>
 </body>
