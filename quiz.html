@@ -9,8 +9,7 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-<script type="application/javascript"
-        src="/6foundations/questions.js">
+<script type="application/javascript" src="questions.js">
 </script>
 <h1>6Foundations</h1>
 <hr>
@@ -28,15 +27,8 @@
 <div id="btn2div" style="display: none;"><button class="button" onclick="init_question(q1)" style="background-color: #D2691E;" id="button2">-</button> <br></div>
 <button class="button" onclick="location.href='https://politicaltests.github.io/libertysorter/'" style="background-color: #B22222;" id="button3">Back</button> <br>
 
-<!-- JavaScript for the test itself -->
 <script>
-    
-    // variable = [Question, Button 1 Text, Button 2 Text, Next Question if Button 1 Clicked, Next Question if Button 2 Clicked, Final question?]
-    q1 = ["This is a question", "Yes, indeed", "No, it isn't", "#CD5C5C", "#F0E68C", "false"];
-    q1.push(q2, q3);
-
-    q2 = ["Question 1", "Yes", "No", "true"];
-  
+        
     function init_question(q1) {
         if (q1[5] == "false") {
             //Hide Button 3, Show Button 2
@@ -61,5 +53,6 @@
         location.href = `results.html`
             + `?id=${q1[3]}`
     }
+        
 </script>
 </body>
