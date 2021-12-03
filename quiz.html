@@ -38,7 +38,7 @@
     q2 = ["Question 1", "Yes", "No", "true"];
   
     function init_question(q1) {
-        if (q1[3] == "false") {
+        if (q1[5] == "false") {
             //Hide Button 3, Show Button 2
             document.getElementById("button3").style.display = "none";
             document.getElementById("button2").style.display = "block";
@@ -50,8 +50,8 @@
             document.getElementById("button1").style.backgroundColor = q1[3]; 
             document.getElementById("button2").style.backgroundColor = q1[4]; 
             //Next Question
-            $("#button1").on("click",function() { init_question(q1[5]); });
             $("#button1").on("click",function() { init_question(q1[6]); });
+            $("#button1").on("click",function() { init_question(q1[7]); });
         } else {
             results(q1);
         }
