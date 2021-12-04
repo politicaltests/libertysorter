@@ -35,10 +35,10 @@
             if (example[6] === "false") {
                 chgText(example);
                 $("#button1").on("click",function() { example[7](); });
-                $("#button2").on("click",function() { init_question(example[8]); });
+                $("#button2").on("click",function() { example[8](); });
             } else if (example[6] !== "false") {
                 chgText(example);
-                $("#button1").on("click",function() { init_question(example[7]); });
+                $("#button1").on("click",function() { example[7](); });
                 $("#button2").on("click",function() { results(example[6]); });
             }
         }
@@ -46,7 +46,7 @@
             if (example[6] === "false") {
                 chgText(example);
                  $("#button1").on("click",function() { results(example[5]); });
-                 $("#button2").on("click",function() { init_question(example[8]); });
+                 $("#button2").on("click",function() { example[8](); });
             } else if (example[6] !== "false") {
                 chgText(example);
                 $("#button1").on("click",function() { results(example[5]); });
