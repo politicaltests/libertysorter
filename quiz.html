@@ -41,28 +41,27 @@
         document.getElementById("button2").style.backgroundColor = q1[4]; 
     }
  
-    function init_question(q1) {
-       "use strict";
-        if (q1[5] == "false") {
-            if (q1[6] == "false") {
-                chgText(q1);
-                $("#button1").on("click",function() { init_question(q1[7]); });
-                $("#button2").on("click",function() { init_question(q1[8]); });
+    function init_question(example) {
+        if (example[5] == "false") {
+            if (example[6] == "false") {
+                chgText(example);
+                $("#button1").on("click",function() { init_question(example[7]); });
+                $("#button2").on("click",function() { init_question(example[8]); });
             } else if (q1[6] != "false") {
-                chgText(q1);
-                $("#button1").on("click",function() { init_question(q1[7]); });
+                chgText(example);
+                $("#button1").on("click",function() { init_question(example[7]); });
                 $("#button2").on("click",function() { results(q1[6]); });
             }
         } 
-        if (q1[5] != "false") {
-            if (q1[6] == "false") {
-                chgText(q1);
-                 $("#button1").on("click",function() { results(q1[5]); });
-                 $("#button2").on("click",function() { init_question(q1[8]); });
+        if (example[5] != "false") {
+            if (example[6] == "false") {
+                chgText(example);
+                 $("#button1").on("click",function() { results(example[5]); });
+                 $("#button2").on("click",function() { init_question(example[8]); });
             } else if (q1[6] != "false") {
-                chgText(q1);
-                $("#button1").on("click",function() { results(q1[5]); });
-                $("#button2").on("click",function() { results(q1[6]); });
+                chgText(example);
+                $("#button1").on("click",function() { results(example[5]); });
+                $("#button2").on("click",function() { results(example[6]); });
             }
         } 
     }
