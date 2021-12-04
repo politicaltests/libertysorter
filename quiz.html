@@ -30,18 +30,18 @@
     const example = ["bro", "Agree", "Disagree", "#3772ff", "#df2935", "false", "false"]; 
     example.push(q1,q1)
  
-    function chgText(q1) {
+    function chgText(example) {
        "use strict";
         //Hide Button 3, Show Button 2
         document.getElementById("button3").style.display = "none";
         document.getElementById("btn2div").style.display = "block";
         //Change Question, Buttons Text
-        document.getElementById("question-text").innerHTML = q1[0];
-        document.getElementById("button1").innerHTML = q1[1];
-        document.getElementById("button2").innerHTML = q1[2];
+        document.getElementById("question-text").innerHTML = example[0];
+        document.getElementById("button1").innerHTML = example[1];
+        document.getElementById("button2").innerHTML = example[2];
         //Change Background Color
-        document.getElementById("button1").style.backgroundColor = q1[3]; 
-        document.getElementById("button2").style.backgroundColor = q1[4]; 
+        document.getElementById("button1").style.backgroundColor = example[3]; 
+        document.getElementById("button2").style.backgroundColor = example[4]; 
     }
  
     function init_question(example) {
