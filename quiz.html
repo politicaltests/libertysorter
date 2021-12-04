@@ -11,7 +11,7 @@
 <body>
 <h1>6Foundations</h1>
 <hr>
-<p style="text-align:center;" class="quiz-topic">How important is this to you?</h2>
+<p id="s" style="text-align:center;" class="quiz-topic">How important is this to you?</h2>
 
 <!-- <div class="container">
  <div class="tooltip" style="margin: 0 auto;"><p class="tool">Help</p>
@@ -30,6 +30,7 @@
     var example = new Array("bro", "Agree", "Disagree", "#3772ff", "#df2935", "false", "false", q1, q1);
  
     function init_question(example) {
+        document.getElementbyId("s").innerHTML = example
         if (example[5] === "false") {
             if (example[6] === "false") {
                 chgText(example);
