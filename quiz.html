@@ -26,22 +26,8 @@
 <button class="button" onclick="location.href='https://politicaltests.github.io/libertysorter/'" style="background-color: #B22222;" id="button3">Back</button> <br>
 
 <script type="application/javascript" src="questions.js"></script>
-<script>
-    var example = new Array("bro", "Agree", "Disagree", "#3772ff", "#df2935", "false", "false", q1,q1);
- 
-    function chgText(example) {
-       "use strict";
-        //Hide Button 3, Show Button 2
-        document.getElementById("button3").style.display = "none";
-        document.getElementById("btn2div").style.display = "block";
-        //Change Question, Buttons Text
-        document.getElementById("question-text").innerHTML = example[0];
-        document.getElementById("button1").innerHTML = example[1];
-        document.getElementById("button2").innerHTML = example[2];
-        //Change Background Color
-        document.getElementById("button1").style.backgroundColor = example[3]; 
-        document.getElementById("button2").style.backgroundColor = example[4]; 
-    }
+<script> 
+    var example = new Array("bro", "Agree", "Disagree", "#3772ff", "#df2935", "false", "false", q1, q1);
  
     function init_question(example) {
         if (example[5] === "false") {
@@ -66,6 +52,20 @@
                 $("#button2").on("click",function() { results(example[6]); });
             }
         }
+    }
+    
+    function chgText(example) {
+       "use strict";
+        //Hide Button 3, Show Button 2
+        document.getElementById("button3").style.display = "none";
+        document.getElementById("btn2div").style.display = "block";
+        //Change Question, Buttons Text
+        document.getElementById("question-text").innerHTML = example[0];
+        document.getElementById("button1").innerHTML = example[1];
+        document.getElementById("button2").innerHTML = example[2];
+        //Change Background Color
+        document.getElementById("button1").style.backgroundColor = example[3]; 
+        document.getElementById("button2").style.backgroundColor = example[4]; 
     }
   
     function results(example) {
