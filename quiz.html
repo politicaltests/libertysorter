@@ -44,7 +44,7 @@
     }
  
     function init_question(example) {
-        if (example[5] == "false") {
+        if (example[5] == "false" && example !== undefined) {
             if (example[6] == "false") {
                 chgText(example);
                 $("#button1").on("click",function() { init_question(example[7]); });
@@ -55,7 +55,7 @@
                 $("#button2").on("click",function() { results(q1[6]); });
             }
         } 
-        if (example[5] != "false") {
+        if (example[5] != "false" && example !== undefined) {
             if (example[6] == "false") {
                 chgText(example);
                  $("#button1").on("click",function() { results(example[5]); });
