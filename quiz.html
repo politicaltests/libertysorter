@@ -41,26 +41,28 @@
     }
  
     function init_question(q1) {
-        if (q1[5] == "false" && q1[6] == "false") {
-            chgText(q1);
-            $("#button1").on("click",function() { init_question(q1[7]); });
-            $("#button2").on("click",function() { init_question(q1[8]); });
+        if (q1[5] == "false") {
+            if (q1[6] == "false") {
+                chgText(q1);
+                $("#button1").on("click",function() { init_question(q1[7]); });
+                $("#button2").on("click",function() { init_question(q1[8]); });
+            } else if (q1[6] != "false") {
+                chgText(q1);
+                $("#button1").on("click",function() { init_question(q1[7]); });
+                $("#button2").on("click",function() { results(q1[6]); });
+            }
         } 
-        else if (q1[5] != "false" && q1[6] != "false") {
-            chgText();
-            $("#button1").on("click",function() { results(q1[5]); });
-            $("#button2").on("click",function() { results(q1[6]); });
-        }
-        else if (q1[5] == "false" && q1[6] != "false") {
-            chgText(q1);
-            $("#button1").on("click",function() { init_question(q1[7]); });
-            $("#button2").on("click",function() { results(q1[6]); });
-        }
-        else if (q1[5] != "false" && q1[6] == "false") {
-            chgText(q1);
-            $("#button1").on("click",function() { results(q1[5]); });
-            $("#button2").on("click",function() { init_question(q1[8]); });
-        }
+        if (q1[5] != "false") {
+            if (q1[6] == "false") {
+                chgText(q1);
+                 $("#button1").on("click",function() { results(q1[5]); });
+                 $("#button2").on("click",function() { init_question(q1[8]); }
+            } else if (q1[6] != "false") {
+                chgText(q1);
+                $("#button1").on("click",function() { results(q1[5]); });
+                $("#button2").on("click",function() { results(q1[6]); });
+            }
+        } 
     }
   
     function results(example) {
