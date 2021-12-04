@@ -28,7 +28,7 @@
 <script type="application/javascript" src="questions.js"></script>
 <script>
     const example = ["bro", "Agree", "Disagree", "#3772ff", "#df2935", "false", "false"]; 
-    example.push(q1,q1)
+    example.push(q1,q1);
  
     function chgText(example) {
        "use strict";
@@ -55,7 +55,7 @@
                 $("#button1").on("click",function() { init_question(example[7]); });
                 $("#button2").on("click",function() { results(example[6]); });
             }
-        };
+        }
         if (example[5] != "false") {
             if (example[6] == "false") {
                 chgText(example);
@@ -66,7 +66,7 @@
                 $("#button1").on("click",function() { results(example[5]); });
                 $("#button2").on("click",function() { results(example[6]); });
             }
-        };
+        }
     }
   
     function results(example) {
