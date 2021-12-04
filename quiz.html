@@ -30,7 +30,7 @@
     var example = new Array("bro", "Agree", "Disagree", "#3772ff", "#df2935", "false", "false", q1, q1);
  
     function init_question(example) {
-        document.getElementbyId("s").innerHTML = example
+         document.getElementById("s").innerHTML = example;
         if (example[5] === "false") {
             if (example[6] === "false") {
                 chgText(example);
