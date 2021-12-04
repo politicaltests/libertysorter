@@ -27,7 +27,7 @@
 
 <script type="application/javascript" src="questions.js"></script>
 <script>
-    var example = ["bro", "Agree", "Disagree", "#3772ff", "#df2935", "false", "false"]; 
+    const example = ["bro", "Agree", "Disagree", "#3772ff", "#df2935", "false", "false"]; 
  
     function chgText(q1) {
        "use strict";
@@ -44,7 +44,7 @@
     }
  
     function init_question(example) {
-        if (example[5] = "false") {
+        if (example[5] == "false") {
             if (example[6] == "false") {
                 chgText(example);
                 $("#button1").on("click",function() { init_question(example[7]); });
