@@ -9,12 +9,9 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-<script type="application/javascript"
-        src="/6foundations/questions.js">
-</script>
 <h1>6Foundations</h1>
 <hr>
-<p style="text-align:center;" class="quiz-topic">How important is this to you?</h2>
+<p id="s" style="text-align:center;" class="quiz-topic">How important is this to you?</h2>
 
 <!-- <div class="container">
  <div class="tooltip" style="margin: 0 auto;"><p class="tool">Help</p>
@@ -22,44 +19,57 @@
 </div> 
 </div> -->
   
-<p class="question" id="question-text">You will be presented with a series of questions or statements. For each one, click the button with the view that most suits yours. Click one of the buttons below to start.</p>
+<p class="question" id="question-text">You will be presented with a series of questions or statements. For each one, click the button with the view that most suits yours.</p>
  
 <button class="button" onclick="init_question(q1)" style="background-color: #8B0000;" id="button1">Proceed to Test</button> <br>
 <div id="btn2div" style="display: none;"><button class="button" onclick="init_question(q1)" style="background-color: #D2691E;" id="button2">-</button> <br></div>
 <button class="button" onclick="location.href='https://politicaltests.github.io/libertysorter/'" style="background-color: #B22222;" id="button3">Back</button> <br>
 
-<!-- JavaScript for the test itself -->
-<script>
-    
-    // variable = [Question, Button 1 Text, Button 2 Text, Next Question if Button 1 Clicked, Next Question if Button 2 Clicked, Final question?]
-    q1 = ["This is a question", "Yes, indeed", "No, it isn't", "#CD5C5C", "#F0E68C", "false"];
-    q1.push(q2, q3);
-
-    q2 = ["Question 1", "Yes", "No", "true"];
-  
-    function init_question(q1) {
-        if (q1[5] == "false") {
-            //Hide Button 3, Show Button 2
-            document.getElementById("button3").style.display = "none";
-            document.getElementById("btn2div").style.display = "block";
-            //Change Question, Buttons Text
-            document.getElementById("question-text").innerHTML = q1[0];
-            document.getElementById("button1").innerHTML = q1[1];
-            document.getElementById("button2").innerHTML = q1[2];
-            //Change Background Color
-            document.getElementById("button1").style.backgroundColor = q1[3]; 
-            document.getElementById("button2").style.backgroundColor = q1[4]; 
-            //Next Question
-            $("#button1").on("click",function() { init_question(q1[6]); });
-            $("#button1").on("click",function() { init_question(q1[7]); });
-        } else {
-            results(q1);
+<script>  
+    function init_question(example) {
+        document.getElementById("s").innerHTML = example;
+        if (example[5] === "false") {
+            if (example[6] === "false") {
+                chgText(example);
+                $("#button1").on("click",function() { example[7](); });
+                $("#button2").on("click",function() { example[8](); });
+            } else if (example[6] !== "false") {
+                chgText(example);
+                $("#button1").on("click",function() { example[7](); });
+                $("#button2").on("click",function() { example[8](example[6]); });
+            }
+        }
+        else if (example[5] !== "false") {
+            if (example[6] === "false") {
+                chgText(example);
+                 $("#button1").on("click",function() { example[7](example[5]); });
+                 $("#button2").on("click",function() { example[8](); });
+            } else if (example[6] !== "false") {
+                chgText(example);
+                $("#button1").on("click",function() { example[7](example[5]); });
+                $("#button2").on("click",function() { example[8](example[6]); });
+            }
         }
     }
-  
-    function results(q1) {
-        location.href = `results.html`
-            + `?id=${q1[3]}`
+    
+    function chgText(example) {
+        //Hide Button 3, Show Button 2
+        document.getElementById("button3").style.display = "none";
+        document.getElementById("btn2div").style.display = "block";
+        //Change Question, Buttons Text
+        document.getElementById("question-text").innerHTML = example[0];
+        document.getElementById("button1").innerHTML = example[1];
+        document.getElementById("button2").innerHTML = example[2];
+        //Change Background Color
+        document.getElementById("button1").style.backgroundColor = example[3]; 
+        document.getElementById("button2").style.backgroundColor = example[4]; 
     }
+  
+    function results(example) {
+        location.href = `results.html`
+            + `?id=${example}`;
+    }
+        
 </script>
+<script type="application/javascript" src="questions2.js"></script>
 </body>
