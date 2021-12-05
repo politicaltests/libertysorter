@@ -28,6 +28,7 @@
 <script type="application/javascript" src="questions.js"></script>
 <script>  
     function init_question(example) {
+        document.getElementById("s").innerHTML = example;
         if (example[5] === "false") {
             if (example[6] === "false") {
                 chgText(example);
