@@ -28,8 +28,8 @@
 <script>  
     function init_question(example) {
         document.getElementById("s").innerHTML = example;
-        if (example[5] === "false") {
-            if (example[6] === "false") {
+        if (example[5] == "false") {
+            if (example[6] == "false") {
                 chgText(example);
                 $("#button1").on("click",function() { example[7](); });
                 $("#button2").on("click",function() { example[8](); });
@@ -39,8 +39,8 @@
                 $("#button2").on("click",function() { example[8](example[6]); });
             }
         }
-        else if (example[5] !== "false") {
-            if (example[6] === "false") {
+        else if (example[5] != "false") {
+            if (example[6] == "false") {
                 chgText(example);
                  $("#button1").on("click",function() { example[7](example[5]); });
                  $("#button2").on("click",function() { example[8](); });
