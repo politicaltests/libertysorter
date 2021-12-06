@@ -1,4 +1,6 @@
 //[Question Text, Button 1 Text, Button 2 Text, Button 1 Color, Button 2 Color, Final Question?, Question after Button 1 Pressed, Question after Button 2 Pressed]
+var q10 = ["Where does knowledge primarily come from?", "Sensory Experience", "The sense of reason", "#053b06", "#0b5d1e", "locke", "rosseau",
+          function() { results(locke) }, function() { results(rosseau) } ];
 
 var q1 = ["All crimes that are victimless, like drug consumption, are not crimes.", "Agree", "Disagree", "#3772ff", "#df2935", "false", "false", 
           function() { init_question(q1) }, function() { init_question(q2) } ];
@@ -32,5 +34,5 @@ var q8 = ["Are you strongly against prohibition of drugs and alcohol?", "Yes", "
 var q9 = ["Which type of monarchy is more preferable?", "Absolute Monarchy", "Constitutional Monarchy", "#593f62", "#5f7995", "voltaire", "false",
           function() { results(voltaire) }, function() { init_question(q10) } ];
 
-var q10 = ["Where does knowledge primarily come from?", "Sensory Experience", "The sense of reason", "#053b06", "#0b5d1e", "locke", "rosseau",
-          function() { results(locke) }, function() { results(rosseau) } ];
+//var q10 = ["Where does knowledge primarily come from?", "Sensory Experience", "The sense of reason", "#053b06", "#0b5d1e", "locke", "rosseau",
+          function() { results(locke) }, function() { results(rosseau) } ];//
