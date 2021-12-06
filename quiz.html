@@ -28,31 +28,6 @@
 <script>  
     function init_question(example) {
         document.getElementById("s").innerHTML = example;
-        if (example[5] == "false") {
-            if (example[6] == "false") {
-                chgText(example);
-                $("#button1").on("click",function() { example[7](); });
-                $("#button2").on("click",function() { example[8](); });
-            } else if (example[6] !== "false") {
-                chgText(example);
-                $("#button1").on("click",function() { example[7](); });
-                $("#button2").on("click",function() { example[8](); });
-            }
-        }
-        else if (example[5] != "false") {
-            if (example[6] == "false") {
-                chgText(example);
-                 $("#button1").on("click",function() { example[7](); });
-                 $("#button2").on("click",function() { example[8](); });
-            } else if (example[6] !== "false") {
-                chgText(example);
-                $("#button1").on("click",function() { example[7](); });
-                $("#button2").on("click",function() { example[8](); });
-            }
-        }
-    }
-    
-    function chgText(example) {
         //Hide Button 3, Show Button 2
         document.getElementById("button3").style.display = "none";
         document.getElementById("btn2div").style.display = "block";
@@ -63,8 +38,11 @@
         //Change Background Color
         document.getElementById("button1").style.backgroundColor = example[3]; 
         document.getElementById("button2").style.backgroundColor = example[4]; 
+     
+        $("#button1").on("click",function() { example[7](); });
+        $("#button2").on("click",function() { example[8](); });
     }
-  
+ 
     function results(example) {
         location.href = `results.html`
             + `?id=${example}`;
