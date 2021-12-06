@@ -29,7 +29,7 @@ var q8 = ["Are you strongly against prohibition of drugs and alcohol?", "Yes", "
           function() { results(mises) }, function() { results(coolidge) } ];
 
 var q9 = ["Which type of monarchy is more preferable?", "Absolute Monarchy", "Constitutional Monarchy", "#593f62", "#5f7995",
-          function() { results(voltaire) }, function() { init_question(q10) } ];
+          function() { results('voltaire') }, function() { init_question(q10) } ];
 
 var q10 = ["Where does knowledge primarily come from?", "Sensory Experience", "The sense of reason", "#053b06", "#0b5d1e",
           function() { results(locke) }, function() { results(rosseau) } ];
