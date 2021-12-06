@@ -8,28 +8,28 @@ var q2 = ["Are monarchies inherently contradictory to the principles of freedom 
 var q3 = ["Within a federal state, what should be the relationship between the federal government of a country, and its subdivisions?", 
           "The Federal Government should be subservient to its subdivisions", "The Federal Government should have the ultimate authority", 
           "#0f084b", "#006ba6",
-          function() { results(antifed) }, function() { init_question(q4) } ];
+          function() { results('antifed') }, function() { init_question(q4) } ];
 
 var q4 = ["Ideally, how powerful should the central government be?", "Strong, in order to promote national unity", 
           "Relatively weak, with limited power", "#121420", "#394c6a",
-          function() { results(hamilton) }, function() { init_question(q5) } ];
+          function() { results('hamilton') }, function() { init_question(q5) } ];
 
 var q5 = ["What should the economy focus more on?", "Agriculture", "Industries", "#f2cd5d", "#6c7d47",
-          function() { results(jefferson) }, function() { init_question(q6) } ];
+          function() { results('jefferson') }, function() { init_question(q6) } ];
 
 var q6 = ["How is the value of products determined?", "By a natural sum of labor, profits, and expenditures", 
           "Through trading, value is subjective", "#5398be", "#dea54b",
-          function() { results(adamsmith) }, function() { init_question(q7) } ];
+          function() { results('adamsmith') }, function() { init_question(q7) } ];
 
 var q7 = ["Is it ideal for countries to intervene in other countries, in order to protect and preserve democracy abroad?", 
           "Generally, yes", "No, in most, if not all cases", "#683257", "#716f71",
-          function() { results(goldwater) }, function() { init_question(q8) } ];
+          function() { results('goldwater') }, function() { init_question(q8) } ];
 
 var q8 = ["Are you strongly against prohibition of drugs and alcohol?", "Yes", "No", "#2d728f", "#f49e4c",
-          function() { results(mises) }, function() { results(coolidge) } ];
+          function() { results('mises') }, function() { results('coolidge') } ];
 
 var q9 = ["Which type of monarchy is more preferable?", "Absolute Monarchy", "Constitutional Monarchy", "#593f62", "#5f7995",
           function() { results('voltaire') }, function() { init_question(q10) } ];
 
 var q10 = ["Where does knowledge primarily come from?", "Sensory Experience", "The sense of reason", "#053b06", "#0b5d1e",
-          function() { results(locke) }, function() { results(rosseau) } ];
+          function() { results('locke') }, function() { results('rosseau') } ];
