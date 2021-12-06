@@ -36,18 +36,18 @@
             } else if (example[6] !== "false") {
                 chgText(example);
                 $("#button1").on("click",function() { example[7](); });
-                $("#button2").on("click",function() { example[8](example[6]); });
+                $("#button2").on("click",function() { example[8](); });
             }
         }
         else if (example[5] != "false") {
             if (example[6] == "false") {
                 chgText(example);
-                 $("#button1").on("click",function() { example[7](example[5]); });
+                 $("#button1").on("click",function() { example[7](); });
                  $("#button2").on("click",function() { example[8](); });
             } else if (example[6] !== "false") {
                 chgText(example);
-                $("#button1").on("click",function() { example[7](example[5]); });
-                $("#button2").on("click",function() { example[8](example[6]); });
+                $("#button1").on("click",function() { example[7](); });
+                $("#button2").on("click",function() { example[8](); });
             }
         }
     }
