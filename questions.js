@@ -1,6 +1,6 @@
 //[Question Text, Button 1 Text, Button 2 Text, Button 1 Color, Button 2 Color, Final Question?, Question after Button 1 Pressed, Question after Button 2 Pressed]
 var q1 = ["All crimes that are victimless, like drug consumption, are not crimes.", "Agree", "Disagree", "#3772ff", "#df2935", 
-          function() { init_question(q1) }, function() { init_question(q2) } ];
+          function() { init_question(q1); }, function() { init_question(q2); } ];
 
 var q2 = ["Are monarchies inherently contradictory to the principles of freedom and liberty?", "Yes, they are", "No, not necessarily", "#595959", "#31081f",
           function() { init_question(q3) }, function() { init_question(q9) } ];
