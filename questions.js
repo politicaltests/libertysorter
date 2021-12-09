@@ -38,7 +38,7 @@ var q10 = ["Which type of monarchy is more preferable?", "Absolute Monarchy", "C
 var q11 = ["Where does knowledge primarily come from?", "The sense of reason", "Sensory Experience", "#053b06", "#0b5d1e",
           function() { results("rosseau"); }, function() { results("locke"); } ];
 
-var q12 = ["A state, defined a monopoly on violence, should exist, so that the rights of life, liberty, and property can be protected.", 
+var q12 = ["A state, defined as a monopoly on violence, should exist, so that the rights of life, liberty, and property can be protected.", 
           "Agree", "Disagree", "#023c40", "#43281c",
           function() { init_question(q13); }, function() { init_question(q14); } ];
 
