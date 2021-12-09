@@ -48,7 +48,7 @@ var q13 = ["Would it preferable if more people voluntarily gave charity to the u
 
 var q14 = ["Is the usage of counter-economics (i.e. black and gray markets) the best method for a non-violet revolution against the state?", 
           "Yes", "No", "#2e2532", "#4c6085",
-          function() { init_question(); }, function() { init_question(); } ];
+          function() { results("x"); }, function() { results("x"); } ];
 
 var q15 = ["What is the best justification for the importance of liberty?", "Liberty is vital for an efficient society", 
            "People have inalienable rights that should not be infringed upon", "#2a9d8f", "#e9c46a",
