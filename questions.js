@@ -3,19 +3,19 @@ var q1 = ["All crimes that are victimless, like drug consumption, are not crimes
           function() { init_question(q1); }, function() { init_question(q2); } ];
 
 var q2 = ["Are monarchies inherently contradictory to the principles of freedom and liberty?", "Yes, they are", "No, not necessarily", "#595959", "#31081f",
-          function() { init_question(q3) }, function() { init_question(q10) } ];
+          function() { init_question(q3); }, function() { init_question(q10); } ];
 
 var q3 = ["Within a federal state, what should be the relationship between the federal government of a country, and its subdivisions?", 
           "The Federal Government should be subservient to its subdivisions", "The Federal Government should have the ultimate authority", 
           "#0f084b", "#006ba6",
-          function() { results("antifed") }, function() { init_question(q4) } ];
+          function() { results("antifed"); }, function() { init_question(q4); } ];
 
 var q4 = ["Ideally, how powerful should the central government be?", "Strong, in order to promote national unity", 
           "Relatively weak, with limited power", "#121420", "#394c6a",
-          function() { results("hamilton") }, function() { init_question(q5) } ];
+          function() { results("hamilton"); }, function() { init_question(q5); } ];
 
-var q5 = ["What should the economy focus more on?", "Agriculture", "Industries", "#f2cd5d", "#6c7d47",
-          function() { results("jefferson") }, function() { init_question(test) } ];
+var q5 = ["What should the economy focus more on?", "Agriculture", "Industry", "#f2cd5d", "#6c7d47",
+          function() { results("jefferson"); }, function() { init_question(test); } ];
 
 var test = ["Land should not be privately owned.", "Agree", "Disagree", "#3e5641", "#a24936",
           function() { results("georgism") }, function() { init_question(q7) } ];
