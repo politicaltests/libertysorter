@@ -15,9 +15,9 @@ var q4 = ["Ideally, how powerful should the central government be?", "Strong, in
           function() { results("hamilton") }, function() { init_question(q5) } ];
 
 var q5 = ["What should the economy focus more on?", "Agriculture", "Industries", "#f2cd5d", "#6c7d47",
-          function() { results("jefferson") }, function() { init_question(q6) } ];
+          function() { results("jefferson") }, function() { init_question(test) } ];
 
-var q6 = ["Land should not be privately owned.", "Agree", "Disagree", "#3e5641", "#a24936",
+var test = ["Land should not be privately owned.", "Agree", "Disagree", "#3e5641", "#a24936",
           function() { results("georgism") }, function() { init_question(q7) } ];
 
 var q7 = ["How is the value of products determined?", "By a natural sum of labor, profits, and expenditures", 
