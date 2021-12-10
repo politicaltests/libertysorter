@@ -54,6 +54,6 @@ var q15 = ["What is the best justification for the importance of liberty?", "Lib
            "People have inalienable rights that should not be infringed upon", "#2a9d8f", "#e9c46a",
           function() { init_question(q16); }, function() { init_question(q17); } ];
 
-var q15 = ["Is the existence of voluntary slavery possible?", "Impossible; it is an oxymoron", 
+var q16 = ["Is the existence of voluntary slavery possible?", "Impossible; it is an oxymoron", 
            "It is possible through a contract", "#918868", "#347fc4",
           function() { results("milton"); }, function() { results("nozick"); } ];
