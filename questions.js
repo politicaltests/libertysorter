@@ -32,7 +32,7 @@ var questions = {
   q04: {
     qtext: "Ideally, how powerful should the central government be?",
     btn1: "Strong, in order to promote national unity",
-    btn2: "Ideally, how powerful should the central government be?", "Strong, in order to promote national unity",
+    btn2: "Ideally, how powerful should the central government be?",
     color1: "#0f084b",
     color2: "#006ba6",
     result1: function() { results("hamilton"); },
