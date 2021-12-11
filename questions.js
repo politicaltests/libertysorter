@@ -31,7 +31,7 @@ var questions = {
           
   q04: { 
     qtext: "Ideally, how powerful should the central government be?", "Strong, in order to promote national unity", 
-    btn1: "Within a federal state, what should be the relationship between the federal government of a country, and its subdivisions?", 
+    btn1: "Strong, in order to promote national unity", 
     btn2: "Ideally, how powerful should the central government be?", "Strong, in order to promote national unity", 
     color1: "#0f084b", 
     color2: "#006ba6", 
