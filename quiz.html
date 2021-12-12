@@ -29,22 +29,21 @@
 
 <script>
     function init_question(example) {
-        var x = example
         //Hide Button 3, Show Button 2
         document.getElementById("button3").style.display = "none";
         document.getElementById("button4").style.display = "none";
         document.getElementById("btn1div").style.display = "block";
         document.getElementById("btn2div").style.display = "block";
         //Change Question, Buttons Text
-        document.getElementById("question-text").innerHTML = questions[x][qtext];
-        document.getElementById("button1").innerHTML = questions[x][btn1];
-        document.getElementById("button2").innerHTML = questions[x][btn2];
+        document.getElementById("question-text").innerHTML = questions.example.qtext;
+        document.getElementById("button1").innerHTML = question.example.btn1;
+        document.getElementById("button2").innerHTML = question.example.btn2;
         //Change Background Color
-        document.getElementById("button1").style.backgroundColor = questions[x][color1];
-        document.getElementById("button2").style.backgroundColor = questions[x][color2];
+        document.getElementById("button1").style.backgroundColor = questions.example.color1;
+        document.getElementById("button2").style.backgroundColor = questions.example.color2;
 
-        $("#button1").on("click", function() { questions[x][result1](); });
-        $("#button2").on("click", function() { questions[x][result2](); });
+        $("#button1").on("click", function() { questions.x.result1](); });
+        $("#button2").on("click", function() { questions.x.result2](); });
     }
 
     /* function results(example) {
