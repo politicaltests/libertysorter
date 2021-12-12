@@ -42,8 +42,8 @@
         document.getElementById("button1").style.backgroundColor = questions[q01]["color1"];
         document.getElementById("button2").style.backgroundColor = questions[q01]["color2"];
 
-        $("#button1").on("click", function() { questions[q01]["result1"](); });
-        $("#button2").on("click", function() { questions[q01]["result2"](); });
+        $("#button1").on("click", function() { questions[q01]["result1"](); return; });
+        $("#button2").on("click", function() { questions[q01]["result2"](); return; });
     }
 
     /* function results(example) {
