@@ -5,8 +5,8 @@ var questions = {
     btn2: "Disagree",
     color1: "#3772ff",
     color2: "#df2935",
-    result1: function() { init_question('q12'); },
-    result2: function() { init_question('q02'); }
+    result1: function() { next_question('q12'); },
+    result2: function() { next_question('q02'); }
   },
 
   q02: {
@@ -15,8 +15,8 @@ var questions = {
     btn2: "No, not necessarily",
     color1: "#595959",
     color2: "#31081f",
-    result1: function() { init_question('q03'); },
-    result2: function() { init_question('q10'); }
+    result1: function() { next_question('q03'); },
+    result2: function() { next_question('q10'); }
   },
 
   q03: {
@@ -26,7 +26,7 @@ var questions = {
     color1: "#0f084b",
     color2: "#006ba6",
     result1: function() { results("antifed"); },
-    result2: function() { init_question('q04'); }
+    result2: function() { next_question('q04'); }
   },
 
   q04: {
@@ -36,7 +36,7 @@ var questions = {
     color1: "#0f084b",
     color2: "#006ba6",
     result1: function() { results("hamilton"); },
-    result2: function() { init_question('q05'); }
+    result2: function() { next_question('q05'); }
   },
 
   q05: {
@@ -46,7 +46,7 @@ var questions = {
     color1: "#f2cd5d",
     color2: "#6c7d47",
     result1: function() { results("jeffersonian"); },
-    result2: function() { init_question('q06'); }
+    result2: function() { next_question('q06'); }
   },
 
   q06: {
@@ -56,7 +56,7 @@ var questions = {
     color1: "#3e5641",
     color2: "#a24936",
     result1: function() { results("georgism"); },
-    result2: function() { init_question('q07'); }
+    result2: function() { next_question('q07'); }
   },
 
   q07: {
@@ -66,7 +66,7 @@ var questions = {
     color1: "#5398be",
     color2: "#dea54b",
     result1: function() { results("adamsmith"); },
-    result2: function() { init_question('q08'); }
+    result2: function() { next_question('q08'); }
   },
 
   q08: {
@@ -76,7 +76,7 @@ var questions = {
     color1: "#683257",
     color2: "#716f71",
     result1: function() { results("goldwater"); },
-    result2: function() { init_question('q09'); }
+    result2: function() { next_question('q09'); }
   },
 
   q09: {
@@ -96,7 +96,7 @@ var questions = {
     color1: "#593f62",
     color2: "#5f7995",
     result1: function() { results("voltaire"); },
-    result2: function() { init_question('q11'); }
+    result2: function() { next_question('q11'); }
   },
 
   q11: {
@@ -115,8 +115,8 @@ var questions = {
     btn2: "Disagree",
     color1: "#023c40",
     color2: "#43281c",
-    result1: function() { init_question('q13'); },
-    result2: function() { init_question('q14'); }
+    result1: function() { next_question('q13'); },
+    result2: function() { next_question('q14'); }
   },
 
   q13: {
@@ -126,7 +126,7 @@ var questions = {
     color1: "#2a9d8f",
     color2: "#e9c46a",
     result1: function() { results("aynrand"); },
-    result2: function() { init_question('q15'); }
+    result2: function() { next_question('q15'); }
   },
 
   q14: {
@@ -145,8 +145,8 @@ var questions = {
     btn2: "People have inalienable rights that should not be infringed upon",
     color1: "#2a9d8f",
     color2: "#e9c46a",
-    result1: function() { init_question('q16'); },
-    result2: function() { init_question('q17'); }
+    result1: function() { next_question('q16'); },
+    result2: function() { next_question('q17'); }
   },
 
   q16: {
