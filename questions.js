@@ -159,4 +159,4 @@ var questions = {
     result2: function() { results("nozick"); }
   },
 
-}
+};
