@@ -24,28 +24,34 @@
 
 <div id="btn1div" style="display: none;"><button class="button" style="background-color: #D2691E;" id="button1">-</button> <br></div>
 <div id="btn2div" style="display: none;"><button class="button" style="background-color: #D2691E;" id="button2">-</button> <br></div>
-<button class="button" onclick="init_question(q01)" style="background-color: #8B0000;" id="button3">Proceed to Test</button> <br>
+<button class="button" onclick="init_question('example')" style="background-color: #8B0000;" id="button3">Proceed to Test</button> <br>
 <button class="button" onclick="location.href='https://politicaltests.github.io/libertysorter/'" style="background-color: #B22222;" id="button4">Back</button> <br>
 
-<script>    
-    function init_question(q01) {
+<script>
+    var currentq = questions["q01"]
+    
+    function init_question() {
         //Hide Button 3, Show Button 2
         document.getElementById("button3").style.display = "none";
         document.getElementById("button4").style.display = "none";
         document.getElementById("btn1div").style.display = "block";
         document.getElementById("btn2div").style.display = "block";
         //Change Question, Buttons Text
-        document.getElementById("question-text").innerHTML = questions.q01.qtext;
-        document.getElementById("button1").innerHTML = questions.q01.btn1;
-        document.getElementById("button2").innerHTML = questions.q01.btn2;
+        document.getElementById("question-text").innerHTML = questions.currentq.qtext;
+        document.getElementById("button1").innerHTML = questions.currentq.btn1;
+        document.getElementById("button2").innerHTML = questions.currentq.btn2;
         //Change Background Color
-        document.getElementById("button1").style.backgroundColor = questions.q01.color1;
-        document.getElementById("button2").style.backgroundColor = questions.q01.color2;
+        document.getElementById("button1").style.backgroundColor = questions.currentq.color1;
+        document.getElementById("button2").style.backgroundColor = questions.currentq.color2;
 
         $("#button1").on("click", function() { questions.q01.result1(); });
         $("#button2").on("click", function() { questions.q01.result2(); });
     }
 
+    function next_question(example) {
+        var currentq = questions[example];
+        init_question();
+    }
     /* function results(example) {
         location.href = `results.html`
             + `?id=${example}`;
