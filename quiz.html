@@ -37,15 +37,15 @@
         document.getElementById("btn1div").style.display = "block";
         document.getElementById("btn2div").style.display = "block";
         //Change Question, Buttons Text
-        document.getElementById("question-text").innerHTML = questions[currentq]["qtext"];
-        document.getElementById("button1").innerHTML = questions[currentq]["btn1"];
-        document.getElementById("button2").innerHTML = questions[currentq]["btn2"];
+        document.getElementById("question-text").innerHTML = questions.currentq.qtext"];
+        document.getElementById("button1").innerHTML = questions.currentq.btn1"];
+        document.getElementById("button2").innerHTML = questions.currentq.btn2"];
         //Change Background Color
-        document.getElementById("button1").style.backgroundColor = questions[currentq]["color1"];
-        document.getElementById("button2").style.backgroundColor = questions[currentq]["color2"];
+        document.getElementById("button1").style.backgroundColor = questions.currentq.color1;
+        document.getElementById("button2").style.backgroundColor = questions.currentq.color2;
 
-        $("#button1").on("click", function() { currentq["result1"](); });
-        $("#button2").on("click", function() { currentq["result2"](); });
+        $("#button1").on("click", function() { currentq.result1(); });
+        $("#button2").on("click", function() { currentq.result2(); });
     }
 
     function next_question(example) {
