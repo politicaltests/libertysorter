@@ -27,9 +27,7 @@
 <button class="button" onclick="init_question('example')" style="background-color: #8B0000;" id="button3">Proceed to Test</button> <br>
 <button class="button" onclick="location.href='https://politicaltests.github.io/libertysorter/'" style="background-color: #B22222;" id="button4">Back</button> <br>
 
-<script>
-    var currentq = "q01";
-    
+<script>    
     function init_question(q01) {
         //Hide Button 3, Show Button 2
         document.getElementById("button3").style.display = "none";
@@ -49,8 +47,7 @@
     }
 
     function next_question(example) {
-        var currentq = example;
-        init_question();
+        init_question(example);
     }
     /* function results(example) {
         location.href = `results.html`
