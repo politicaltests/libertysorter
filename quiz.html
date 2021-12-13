@@ -35,15 +35,15 @@
         document.getElementById("btn1div").style.display = "block";
         document.getElementById("btn2div").style.display = "block";
         //Change Question, Buttons Text
-        document.getElementById("question-text").innerHTML = questions[x]["qtext"];
-        document.getElementById("button1").innerHTML = questions[x]["btn1"];
-        document.getElementById("button2").innerHTML = questions[x]["btn2"];
+        document.getElementById("question-text").innerHTML = questions.x.qtext;
+        document.getElementById("button1").innerHTML = questions.x.btn1;
+        document.getElementById("button2").innerHTML = questions.x.btn2;
         //Change Background Color
-        document.getElementById("button1").style.backgroundColor = questions[x]["color1"];
-        document.getElementById("button2").style.backgroundColor = questions[x]["color2"];
+        document.getElementById("button1").style.backgroundColor = questions.x.color1;
+        document.getElementById("button2").style.backgroundColor = questions.x.color2;
 
-        $("#button1").on("click", function() { questions[x]["result1"](); });
-        $("#button2").on("click", function() { questions[x]["result2"](); });
+        $("#button1").on("click", function() { questions.x.result1(); });
+        $("#button2").on("click", function() { questions.x.result2(); });
     }
 
     /* function results(example) {
