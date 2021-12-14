@@ -5,8 +5,8 @@ var questions = {
     btn2: "Disagree",
     color1: "#3772ff",
     color2: "#df2935",
-    result1: function() { next_question(`q12`); },
-    result2: function() { next_question("q02"); }
+    nextq: ["q12", "q02"],
+    results: ["none", "none"],
   },
 
   q02: {
