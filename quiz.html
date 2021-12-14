@@ -50,20 +50,20 @@
 
     function next_question_one(x) {
         if (questions[x]["results"][0] === "none") {
-            var nextID = questions[x]["nextq"][0];
+            var nextID = questions.x["nextq"][0];
             init_question(nextID);
         } else {
-            var resultsID = questions[x]["results"][0];
+            var resultsID = questions.x["results"][0];
             location.href = `results.html` + `?id=${resultsID}`;
         }
     }
     
     function next_question_two(x) {
         if (questions[x]["results"][1] === "none") {
-            var nextID = questions[x]["nextq"][1];
+            var nextID = questions.x["nextq"][1];
             init_question(nextID);
         } else {
-            var resultsID = questions[x]["results"][1];
+            var resultsID = questions.x["results"][1];
             location.href = `results.html` + `?id=${resultsID}`;
         }
     }
