@@ -37,33 +37,33 @@
         document.getElementById("btn1div").style.display = "block";
         document.getElementById("btn2div").style.display = "block";
         //Change Question, Buttons Text
-        document.getElementById("question-text").innerHTML = questions[x]["qtext"];
-        document.getElementById("button1").innerHTML = questions[x]["btn1"];
-        document.getElementById("button2").innerHTML = questions[x]["btn2"];
+        document.getElementById("question-text").innerHTML = questions[x].qtext;
+        document.getElementById("button1").innerHTML = questions[x].btn1;
+        document.getElementById("button2").innerHTML = questions[x].btn2;
         //Change Background Color
-        document.getElementById("button1").style.backgroundColor = questions[x]["color1"];
-        document.getElementById("button2").style.backgroundColor = questions[x]["color2"];
+        document.getElementById("button1").style.backgroundColor = questions[x].color1;
+        document.getElementById("button2").style.backgroundColor = questions[x].color2;
 
         $("#button1").on("click", function() { next_question_one(x); });
         $("#button2").on("click", function() { next_question_two(x); });
     }
 
     function next_question_one(x) {
-        if (questions[x]["results"][0] === "none") {
-            var nextID = questions.[x]["nextq"][0];
+        if (questions[x].results[0] === "none") {
+            var nextID = questions[x].nextq[0];
             init_question(nextID);
         } else {
-            var resultsID = questions.[x]["results"][0];
+            var resultsID = questions[x].results[0];
             location.href = `results.html` + `?id=${resultsID}`;
         }
     }
     
     function next_question_two(x) {
-        if (questions[x]["results"][1] === "none") {
-            var nextID = questions.[x]["nextq"][1];
+        if (questions[x].results[1] === "none") {
+            var nextID = questions[x].nextq[1];
             init_question(nextID);
         } else {
-            var resultsID = questions.[x]["results"][1];
+            var resultsID = questions[x].results[1];
             location.href = `results.html` + `?id=${resultsID}`;
         }
     }
