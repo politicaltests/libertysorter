@@ -159,4 +159,44 @@ var questions = {
     results: ["milton", "nozick"]
   },
 
+  q17: {
+    qtext: "What is your position on cultural issues?",
+    btn1: "Conservative",
+    btn2: "Progressive",
+    color1: "#29335c",
+    color2: "#7da64e",
+    nextq: ["q18", "none"],
+    results: ["none", "garyjohnson"]
+  },
+
+  q18: {
+    qtext: "What is your opinion on capital punishment (the death penalty)?",
+    btn1: "It should be used for some crimes",
+    btn2: "It should be abolished",
+    color1: "#463f3a",
+    color2: "#c36346",
+    nextq: ["none", "q19"],
+    results: ["korwin", "none"]
+  },
+
+  q19: {
+    qtext: "In most, if not all cases, foreign intervention is wrong, if it's not defensive.",
+    btn1: "Agree",
+    btn2: "Disagree",
+    color1: "#f0c808",
+    color2: "#f44174",
+    nextq: ["q20", "none"],
+    results: ["none", "randpaul"]
+  },
+
+  q20: {
+    qtext: "In the current system, should immigration be expanded?",
+    btn1: "Yes",
+    btn2: "No",
+    color1: "#59c9a5",
+    color2: "#1a8fe3",
+    nextq: ["none", "none"],
+    results: ["amash", "ronpaul"]
+  },
+
 };
