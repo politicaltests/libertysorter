@@ -1,5 +1,5 @@
 var questions = {
-  
+
   q01: {
     qtext: "All crimes that are victimless, like drug consumption, are not crimes.",
     btn1: "Agree",
@@ -126,8 +126,8 @@ var questions = {
     btn2: "No",
     color1: "#2a9d8f",
     color2: "#e9c46a",
-    nextq: ["none", "q15"],
-    results: ["aynrand", "none"]
+    nextq: ["q15", "none"],
+    results: ["none", "aynrand"]
   },
 
   q14: {
