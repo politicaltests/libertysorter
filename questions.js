@@ -136,8 +136,8 @@ var questions = {
     btn2: "No",
     color1: "#2e2532",
     color2: "#4c6085",
-    nextq: ["none", "none"],
-    results: ["test", "test"]
+    nextq: ["none", "q21"],
+    results: ["agorism", "none"]
   },
 
   q15: {
@@ -157,7 +157,7 @@ var questions = {
     color1: "#918868",
     color2: "#347fc4",
     nextq: ["none", "none"],
-    results: ["milton", "nozick"]
+    results: ["mfriedman", "nozick"]
   },
 
   q17: {
@@ -198,6 +198,66 @@ var questions = {
     color2: "#1a8fe3",
     nextq: ["none", "none"],
     results: ["amash", "ronpaul"]
+  },
+
+  q21: {
+    qtext: "Which label do you self-identify more with?",
+    btn1: "Anarchist, without adjectives",
+    btn2: "Anarcho-Capitalist",
+    color1: "#242423",
+    color2: "#d39e0d",
+    nextq: ["q22", "none"],
+    results: ["none", "malice"]
+  },
+
+  q22: {
+    qtext: "Ideally, what should be done to the state?",
+    btn1: "Remove its monopoly on violence and make it voluntary",
+    btn2: "Completely dismantle and abolish it",
+    color1: "#7a7d7d",
+    color2: "#565254",
+    nextq: ["none", "q23"],
+    results: ["voluntaryism", "none"]
+  },
+
+  q23: {
+    qtext: "What should be the primary reason for the aboolition of the state?",
+    btn1: "A statist society is inefficient",
+    btn2: "The state, by definition, violates the rights of its subjects",
+    color1: "#5c826a",
+    color2: "#9e8e31",
+    nextq: ["none", "q24"],
+    results: ["dfriedman", "none"]
+  },
+
+  q24: {
+    qtext: "Does a fetus posses the natural rights that humans have?",
+    btn1: "Yes",
+    btn2: "No",
+    color1: "#222e50",
+    color2: "#007991",
+    nextq: ["q25", "none"],
+    results: ["none", "rothbard"]
+  },
+
+  q25: {
+    qtext: "Does a mother have the right to \"evict\" a fetus out of her womb, even if the fetus might not survive as a result?",
+    btn1: "Yes",
+    btn2: "No",
+    color1: "#29524a",
+    color2: "#aa8974",
+    nextq: ["block", "none"],
+    results: ["none", "q26"]
+  },
+
+  q26: {
+    qtext: "Which political system is less worse?",
+    btn1: "Absolute Monarchy",
+    btn2: "Liberal Democracy",
+    color1: "#5f0f40",
+    color2: "#0f4c5c",
+    nextq: ["none", "none"],
+    results: ["hoppe", "woods"]
   },
 
 };
