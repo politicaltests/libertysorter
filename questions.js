@@ -206,8 +206,8 @@ var questions = {
     btn2: "Anarcho-Capitalist",
     color1: "#242423",
     color2: "#d39e0d",
-    nextq: ["q22", "none"],
-    results: ["none", "malice"]
+    nextq: ["none", "q22"],
+    results: ["malice", "none"]
   },
 
   q22: {
