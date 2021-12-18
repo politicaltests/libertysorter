@@ -6,6 +6,7 @@ var questions = {
     btn2: "Disagree",
     color1: "#3772ff",
     color2: "#df2935",
+    prevq: "none",
     nextq: ["q12", "q02"],
     results: ["none", "none"]
   },
@@ -16,6 +17,7 @@ var questions = {
     btn2: "No, not necessarily",
     color1: "#595959",
     color2: "#31081f",
+    prevq: "q01",
     nextq: ["q03", "q10"],
     results: ["none", "none"]
   },
@@ -26,6 +28,7 @@ var questions = {
     btn2: "The Federal Government should have the ultimate authority",
     color1: "#0f084b",
     color2: "#006ba6",
+    prevq: "q02",
     nextq: ["none", "q04"],
     results: ["antifed", "none"]
   },
@@ -36,6 +39,7 @@ var questions = {
     btn2: "Relatively weak, with limited power",
     color1: "#0f084b",
     color2: "#006ba6",
+    prevq: "q03",
     nextq: ["none", "q05"],
     results: ["hamilton", "none"]
   },
@@ -46,6 +50,7 @@ var questions = {
     btn2: "Industry",
     color1: "#f2cd5d",
     color2: "#6c7d47",
+    prevq: "q04",
     nextq: ["none", "q06"],
     results: ["jeffersonian", "none"]
   },
@@ -56,6 +61,7 @@ var questions = {
     btn2: "Disagree",
     color1: "#3e5641",
     color2: "#a24936",
+    prevq: "q05",
     nextq: ["none", "q07"],
     results: ["georgism", "none"]
   },
@@ -66,6 +72,7 @@ var questions = {
     btn2: "It cannot be; value is subjective",
     color1: "#5398be",
     color2: "#dea54b",
+    prevq: "q06",
     nextq: ["none", "q08"],
     results: ["adamsmith", "none"]
   },
@@ -76,6 +83,7 @@ var questions = {
     btn2: "No, in most, if not all cases",
     color1: "#683257",
     color2: "#716f71",
+    prevq: "q07",
     nextq: ["none", "q09"],
     results: ["goldwater", "none"]
   },
@@ -86,6 +94,7 @@ var questions = {
     btn2: "No",
     color1: "#2d728f",
     color2: "#f49e4c",
+    prevq: "q08",
     nextq: ["none", "none"],
     results: ["mises", "coolidge"]
   },
@@ -96,6 +105,7 @@ var questions = {
     btn2: "Constitutional Monarchy",
     color1: "#593f62",
     color2: "#5f7995",
+    prevq: "q02",
     nextq: ["none", "q11"],
     results: ["voltaire", "none"]
   },
@@ -106,6 +116,7 @@ var questions = {
     btn2: "Sensory Experience",
     color1: "#053b06",
     color2: "#0b5d1e",
+    prevq: "q10",
     nextq: ["none", "none"],
     results: ["rosseau", "locke"]
   },
@@ -116,6 +127,7 @@ var questions = {
     btn2: "Disagree",
     color1: "#023c40",
     color2: "#43281c",
+    prevq: "q01",
     nextq: ["q13", "q14"],
     results: ["none", "none"]
   },
@@ -126,6 +138,7 @@ var questions = {
     btn2: "No",
     color1: "#2a9d8f",
     color2: "#e9c46a",
+    prevq: "q12",
     nextq: ["q15", "none"],
     results: ["none", "aynrand"]
   },
@@ -136,6 +149,7 @@ var questions = {
     btn2: "No",
     color1: "#2e2532",
     color2: "#4c6085",
+    prevq: "q12",
     nextq: ["none", "q21"],
     results: ["agorism", "none"]
   },
@@ -146,6 +160,7 @@ var questions = {
     btn2: "People have inalienable rights that should not be infringed upon",
     color1: "#2a9d8f",
     color2: "#e9c46a",
+    prevq: "q13",
     nextq: ["q16", "q17"],
     results: ["none", "none"]
   },
@@ -156,6 +171,7 @@ var questions = {
     btn2: "It is possible through a contract",
     color1: "#918868",
     color2: "#347fc4",
+    prevq: "q15",
     nextq: ["none", "none"],
     results: ["mfriedman", "nozick"]
   },
@@ -166,6 +182,7 @@ var questions = {
     btn2: "Progressive",
     color1: "#29335c",
     color2: "#7da64e",
+    prevq: "q15",
     nextq: ["q18", "none"],
     results: ["none", "garyjohnson"]
   },
@@ -176,6 +193,7 @@ var questions = {
     btn2: "It should be abolished",
     color1: "#463f3a",
     color2: "#c36346",
+    prevq: "q17",
     nextq: ["none", "q19"],
     results: ["korwin", "none"]
   },
@@ -186,6 +204,7 @@ var questions = {
     btn2: "Disagree",
     color1: "#f0c808",
     color2: "#f44174",
+    prevq: "q18",
     nextq: ["q20", "none"],
     results: ["none", "randpaul"]
   },
@@ -196,6 +215,7 @@ var questions = {
     btn2: "No",
     color1: "#59c9a5",
     color2: "#1a8fe3",
+    prevq: "q19",
     nextq: ["none", "none"],
     results: ["amash", "ronpaul"]
   },
@@ -206,6 +226,7 @@ var questions = {
     btn2: "Anarcho-Capitalist",
     color1: "#242423",
     color2: "#d39e0d",
+    prevq: "q14",
     nextq: ["q22", "none"],
     results: ["none", "malice"]
   },
@@ -216,6 +237,7 @@ var questions = {
     btn2: "Completely dismantle and abolish it",
     color1: "#7a7d7d",
     color2: "#565254",
+    prevq: "q21",
     nextq: ["none", "q23"],
     results: ["voluntaryism", "none"]
   },
@@ -226,6 +248,7 @@ var questions = {
     btn2: "The state, by definition, violates the rights of its subjects",
     color1: "#5c826a",
     color2: "#9e8e31",
+    prevq: "q22",
     nextq: ["none", "q24"],
     results: ["dfriedman", "none"]
   },
@@ -236,6 +259,7 @@ var questions = {
     btn2: "No",
     color1: "#222e50",
     color2: "#007991",
+    prevq: "q23",
     nextq: ["q25", "none"],
     results: ["none", "rothbard"]
   },
@@ -246,6 +270,7 @@ var questions = {
     btn2: "No",
     color1: "#29524a",
     color2: "#aa8974",
+    prevq: "q24",
     nextq: ["block", "none"],
     results: ["none", "q26"]
   },
@@ -256,8 +281,9 @@ var questions = {
     btn2: "Liberal Democracy",
     color1: "#5f0f40",
     color2: "#0f4c5c",
+    prevq: "q25",
     nextq: ["none", "none"],
     results: ["hoppe", "woods"]
-  },
+  }
 
 };
