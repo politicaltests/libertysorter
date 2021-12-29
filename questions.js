@@ -1,5 +1,4 @@
-var questions = {
-
+const questions = {
   q01: {
     qtext: "All crimes that are victimless, like drug consumption, are not crimes.",
     btn1: "Agree",
@@ -284,5 +283,4 @@ var questions = {
     nextq: ["none", "none"],
     results: ["hoppe", "woods"]
   }
-
 };
