@@ -28,9 +28,6 @@
 <button class="button" onclick="location.href='https://politicaltests.github.io/libertysorter/'" style="background-color: #B22222;" id="button4">Back</button> <br>
 
 <script>
-    const zero = 0;
-    const one = 1;
- 
     var x = "q01";
     
     function init_question() {
@@ -47,11 +44,11 @@
         document.getElementById("button1").style.backgroundColor = questions[x].color1;
         document.getElementById("button2").style.backgroundColor = questions[x].color2;
 
-        $("#button1").on("click", function() { next_question(x, zero); });
-        $("#button2").on("click", function() { next_question(x, one); });
+        $("#button1").on("click", function() { next_question(x, 0); });
+        $("#button2").on("click", function() { next_question(x, 1); });
     }
 
-    function next_question(x, zero) {
+    function next_question(x, 0) {
         if (questions[x].results[zero] === "none") {
             var x = questions[x].nextq[zero];
             init_question();
