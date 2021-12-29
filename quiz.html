@@ -28,9 +28,12 @@
 <button class="button" onclick="location.href='https://politicaltests.github.io/libertysorter/'" style="background-color: #B22222;" id="button4">Back</button> <br>
 
 <script>
+    const zero = 0;
+    const one = 1;
+ 
     var x = "q01";
     
-    function init_question(x) {
+    function init_question() {
         //Hide Button 3, Show Button 2
         document.getElementById("button3").style.display = "none";
         document.getElementById("button4").style.display = "none";
@@ -44,26 +47,16 @@
         document.getElementById("button1").style.backgroundColor = questions[x].color1;
         document.getElementById("button2").style.backgroundColor = questions[x].color2;
 
-        $("#button1").on("click", function() { next_question_one(x); });
-        $("#button2").on("click", function() { next_question_two(x); });
+        $("#button1").on("click", function() { next_question(x, zero); });
+        $("#button2").on("click", function() { next_question(x, one); });
     }
 
-    function next_question_one(x) {
-        if (questions[x].results[0] === "none") {
-            var nextID = questions[x].nextq[0];
-            init_question(nextID);
+    function next_question(x, zero) {
+        if (questions[x].results[zero] === "none") {
+            var x = questions[x].nextq[zero];
+            init_question();
         } else {
-            var resultsID = questions[x].results[0];
-            location.href = `results.html` + `?id=${resultsID}`;
-        }
-    }
-    
-    function next_question_two(x) {
-        if (questions[x].results[1] === "none") {
-            var nextID = questions[x].nextq[1];
-            init_question(nextID);
-        } else {
-            var resultsID = questions[x].results[1];
+            var resultsID = questions[x].results[zero];
             location.href = `results.html` + `?id=${resultsID}`;
         }
     }
