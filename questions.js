@@ -1,4 +1,15 @@
 const questions = {
+  introduction: {
+    qtext: "",
+    btn1: "",
+    btn2: "",
+    color1: "",
+    color2: "",
+    prevq: "",
+    nextq: ["q01", "q01"],
+    results: ["none", "none"]
+  },
+  
   q01: {
     qtext: "All crimes that are victimless, like drug consumption, are not crimes.",
     btn1: "Agree",
