@@ -53,7 +53,7 @@
 
     function next_question(example, zero) {
         if (questions[example].results[zero] === "none") {
-            globalThis.x = questions[example].nextq[zero];
+            x = questions[example].nextq[zero];
             init_question();
         } else {
             var resultsID = questions[example].results[zero];
