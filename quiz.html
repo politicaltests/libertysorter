@@ -24,14 +24,14 @@
 
 <div id="btn1div" style="display: none;"><button class="button" style="background-color: #D2691E;" id="button1">-</button> <br></div>
 <div id="btn2div" style="display: none;"><button class="button" style="background-color: #D2691E;" id="button2">-</button> <br></div>
-<button class="button" onclick="init_question('q01')" style="background-color: #8B0000;" id="button3">Proceed to Test</button> <br>
+<button class="button" onclick="next_question('introduction')" style="background-color: #8B0000;" id="button3">Proceed to Test</button> <br>
 <button class="button" onclick="location.href='https://politicaltests.github.io/libertysorter/'" style="background-color: #B22222;" id="button4">Back</button> <br>
 
 <script>
     const zero = 0;
     const one = 1;
     
-    var x = "q01";
+    //var x = "q01";
     
     function init_question() {
         //Hide Button 3, Show Button 2
@@ -51,12 +51,12 @@
         $("#button2").on("click", function() { next_question(x, 1); });
     }
 
-    function next_question(x, zero) {
-        if (questions[x].results[zero] === "none") {
-            var x = questions[x].nextq[zero];
+    function next_question(example, zero) {
+        if (questions[example].results[zero] === "none") {
+            var x = questions[example].nextq[zero];
             init_question();
         } else {
-            var resultsID = questions[x].results[zero];
+            var resultsID = questions[example].results[zero];
             location.href = `results.html` + `?id=${resultsID}`;
         }
     }
