@@ -24,39 +24,36 @@
 
 <div id="btn1div" style="display: none;"><button class="button" style="background-color: #D2691E;" id="button1">-</button> <br></div>
 <div id="btn2div" style="display: none;"><button class="button" style="background-color: #D2691E;" id="button2">-</button> <br></div>
-<button class="button" onclick="next_question('introduction', zero)" style="background-color: #8B0000;" id="button3">Proceed to Test</button> <br>
+<button class="button" onclick="init_question(q01)" style="background-color: #8B0000;" id="button3">Proceed to Test</button> <br>
 <button class="button" onclick="location.href='https://politicaltests.github.io/libertysorter/'" style="background-color: #B22222;" id="button4">Back</button> <br>
 
 <script>
-    const zero = 0;
-    const one = 1;
+    var current_question = Object.keys(questions)[0]
     
-    //var x = "q01";
-    
-    function init_question() {
+    function init_question(current_question) {
         //Hide Button 3, Show Button 2
         document.getElementById("button3").style.display = "none";
         document.getElementById("button4").style.display = "none";
         document.getElementById("btn1div").style.display = "block";
         document.getElementById("btn2div").style.display = "block";
         //Change Question, Buttons Text
-        document.getElementById("question-text").innerHTML = questions[x].qtext;
-        document.getElementById("button1").innerHTML = questions[x].btn1;
-        document.getElementById("button2").innerHTML = questions[x].btn2;
+        document.getElementById("question-text").innerHTML = questions[current_question].qtext;
+        document.getElementById("button1").innerHTML = questions[current_question].btn[0];
+        document.getElementById("button2").innerHTML = questions[current_question].btn[1];
         //Change Background Color
-        document.getElementById("button1").style.backgroundColor = questions[x].color1;
-        document.getElementById("button2").style.backgroundColor = questions[x].color2;
+        document.getElementById("button1").style.backgroundColor = questions[current_question].color[0];
+        document.getElementById("button2").style.backgroundColor = questions[current_question].color[1];
 
-        $("#button1").on("click", function() { next_question(x, 0); });
-        $("#button2").on("click", function() { next_question(x, 1); });
+        $("#button1").on("click", function() { next_question(current_question, 0); });
+        $("#button2").on("click", function() { next_question(current_question, 1); });
     }
 
-    function next_question(example, zero) {
-        if (questions[example].results[zero] === "none") {
-            x = questions[example].nextq[zero];
-            init_question();
+    function next_question(name, number) {
+        if (questions[name].results[number] === "none") {
+            current_question = questions[name].nextq[number];
+            init_question(current_question);
         } else {
-            var resultsID = questions[example].results[zero];
+            var resultsID = questions[name].results[number];
             location.href = `results.html` + `?id=${resultsID}`;
         }
     }
