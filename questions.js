@@ -1,21 +1,8 @@
 const questions = {
-  introduction: {
-    qtext: "",
-    btn1: "",
-    btn2: "",
-    color1: "",
-    color2: "",
-    prevq: "",
-    nextq: ["q01", "q01"],
-    results: ["none", "none"]
-  },
-  
   q01: {
     qtext: "All crimes that are victimless, like drug consumption, are not crimes.",
-    btn1: "Agree",
-    btn2: "Disagree",
-    color1: "#3772ff",
-    color2: "#df2935",
+    btn: ["Agree", "Disagree"],
+    color: ["#3772ff", "#df2935"],
     prevq: "none",
     nextq: ["q12", "q02"],
     results: ["none", "none"]
@@ -23,10 +10,8 @@ const questions = {
 
   q02: {
     qtext: "Are monarchies contradictory to the principles of freedom and liberty?",
-    btn1: "Yes, they are",
-    btn2: "No, not necessarily",
-    color1: "#595959",
-    color2: "#31081f",
+    btn: ["Yes, they are", "No, not necessarily"],
+    color: ["#595959", "#31081f"],
     prevq: "q01",
     nextq: ["q03", "q10"],
     results: ["none", "none"]
