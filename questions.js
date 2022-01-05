@@ -3,280 +3,233 @@ const questions = {
     qtext: "All crimes that are victimless, like drug consumption, are not crimes.",
     btn: ["Agree", "Disagree"],
     color: ["#3772ff", "#df2935"],
-    prevq: "none",
     nextq: ["q12", "q02"],
-    results: ["none", "none"]
+    results: ["none", "none"],
+    prevq: "none"
   },
 
   q02: {
     qtext: "Are monarchies contradictory to the principles of freedom and liberty?",
     btn: ["Yes, they are", "No, not necessarily"],
     color: ["#595959", "#31081f"],
-    prevq: "q01",
     nextq: ["q03", "q10"],
-    results: ["none", "none"]
+    results: ["none", "none"],
+    prevq: "q01"
   },
 
   q03: {
     qtext: "Within a federal state, what should be the relationship between the federal government of a country, and its subdivisions?",
-    btn1: "The Federal Government should be subsurvient to its subdivisions",
-    btn2: "The Federal Government should have the ultimate authority",
-    color1: "#0f084b",
-    color2: "#006ba6",
-    prevq: "q02",
+    btn: ["The Federal Government should be subsurvient to its subdivisions", "The Federal Government should have the ultimate authority"],
+    color: ["#0f084b", "#006ba6"],
     nextq: ["none", "q04"],
-    results: ["antifed", "none"]
+    results: ["antifed", "none"],
+    prevq: "q02"
   },
 
   q04: {
     qtext: "Ideally, how powerful should the central government be?",
-    btn1: "Strong, in order to promote national unity",
-    btn2: "Relatively weak, with limited power",
-    color1: "#0f084b",
-    color2: "#006ba6",
-    prevq: "q03",
+    btn: ["Strong, in order to promote national unity", "Relatively weak, with limited power"],
+    color: ["#0f084b", "#006ba6"],
     nextq: ["none", "q05"],
-    results: ["hamilton", "none"]
+    results: ["hamilton", "none"],
+    prevq: "q03"
   },
 
   q05: {
     qtext: "What should the economy primarily focus on?",
-    btn1: "Agriculture",
-    btn2: "Industry",
-    color1: "#f2cd5d",
-    color2: "#6c7d47",
-    prevq: "q04",
+    btn: ["Agriculture", "Industry"],
+    color: ["#f2cd5d", "#6c7d47"],
     nextq: ["none", "q06"],
-    results: ["jeffersonian", "none"]
+    results: ["jeffersonian", "none"],
+    prevq: "q04"
   },
 
   q06: {
     qtext: "Land should not be privately owned.",
-    btn1: "Agree",
-    btn2: "Disagree",
-    color1: "#3e5641",
-    color2: "#a24936",
-    prevq: "q05",
+    btn: ["Agree", "Disagree"],
+    color: ["#3e5641", "#a24936"],
     nextq: ["none", "q07"],
-    results: ["georgism", "none"]
+    results: ["georgism", "none"],
+    prevq: "q05",
   },
 
   q07: {
     qtext: "How can the inherent value of a product be determined?",
-    btn1: "By a sum of labor, profits, and expenditures",
-    btn2: "It cannot be; value is subjective",
-    color1: "#5398be",
-    color2: "#dea54b",
-    prevq: "q06",
+    btn: ["By a sum of labor, profits, and expenditures", "It cannot be; value is subjective"],
+    color: ["#5398be", "#dea54b"],
     nextq: ["none", "q08"],
-    results: ["adamsmith", "none"]
+    results: ["adamsmith", "none"],
+    prevq: "q06"
   },
 
   q08: {
     qtext: "Is it ideal for countries to intervene in other countries, in order to protect and preserve democracy abroad?",
-    btn1: "Generally, yes",
-    btn2: "No, in most, if not all cases",
-    color1: "#683257",
-    color2: "#716f71",
-    prevq: "q07",
+    btn: ["Generally, yes", "No, in most, if not all cases"],
+    color: ["#683257", "#716f71"],
     nextq: ["none", "q09"],
-    results: ["goldwater", "none"]
+    results: ["goldwater", "none"],
+    prevq: "q07"
   },
 
   q09: {
-    qtext: "Are you strongly against prohibition of drugs and alcohol?",
-    btn1: "Yes",
-    btn2: "No",
-    color1: "#2d728f",
-    color2: "#f49e4c",
-    prevq: "q08",
+    qtext: "Are you against the prohibition of drugs and alcohol?",
+    btn: ["Yes", "No"],
+    color: ["#2d728f", "#f49e4c"],
     nextq: ["none", "none"],
-    results: ["mises", "coolidge"]
+    results: ["mises", "coolidge"],
+    prevq: "q08"
   },
 
   q10: {
     qtext: "Which type of monarchy is more preferable?",
-    btn1: "Absolute Monarchy",
-    btn2: "Constitutional Monarchy",
-    color1: "#593f62",
-    color2: "#5f7995",
-    prevq: "q02",
+    btn: ["Absolute Monarchy", "Constitutional Monarchy"],
+    color: ["#593f62", "#5f7995"],
     nextq: ["none", "q11"],
-    results: ["voltaire", "none"]
+    results: ["voltaire", "none"],
+    prevq: "q02"
   },
 
   q11: {
-    qtext: "Where does knowledge primarily come from?",
-    btn1: "The sense of reason",
-    btn2: "Sensory Experience",
-    color1: "#053b06",
-    color2: "#0b5d1e",
-    prevq: "q10",
+    qtext: "What should be the primary source of knowledge?",
+    btn: ["Rational Thinking", "Sensory Experience"],
+    color: ["#053b06", "#0b5d1e"],
     nextq: ["none", "none"],
-    results: ["rosseau", "locke"]
+    results: ["rosseau", "locke"],
+    prevq: "q10"
   },
 
   q12: {
     qtext: "A state, defined as a monopoly on violence, should exist, so that the rights of life, liberty, and property can be protected.",
-    btn1: "Agree",
-    btn2: "Disagree",
-    color1: "#023c40",
-    color2: "#43281c",
-    prevq: "q01",
+    btn: ["Agree", "Disagree"],
+    color: ["#023c40", "#43281c"],
     nextq: ["q13", "q14"],
-    results: ["none", "none"]
+    results: ["none", "none"],
+    prevq: "q01"
   },
 
   q13: {
     qtext: "Would it preferable if more people voluntarily gave charity to the unfortunate?",
-    btn1: "Yes",
-    btn2: "No",
-    color1: "#2a9d8f",
-    color2: "#e9c46a",
-    prevq: "q12",
+    btn: ["Yes", "No"],
+    color: ["#2a9d8f", "#e9c46a"],
     nextq: ["q15", "none"],
-    results: ["none", "aynrand"]
+    results: ["none", "aynrand"],
+    prevq: "q12"
   },
 
   q14: {
     qtext: "Is the usage of counter-economics (i.e. black and gray markets) the best method for a non-violet revolution against the state?",
-    btn1: "Yes",
-    btn2: "No",
-    color1: "#2e2532",
-    color2: "#4c6085",
-    prevq: "q12",
+    btn: ["Yes", "No"],
+    color: ["#2e2532", "#4c6085"],
     nextq: ["none", "q21"],
-    results: ["agorism", "none"]
+    results: ["agorism", "none"],
+    prevq: "q12"
   },
 
   q15: {
     qtext: "What is the best justification for the importance of liberty?",
-    btn1: "Liberty is vital for an efficient society",
-    btn2: "People have inalienable rights that should not be infringed upon",
-    color1: "#2a9d8f",
-    color2: "#e9c46a",
-    prevq: "q13",
+    btn: ["Liberty is vital for an efficient society", "People have inalienable rights that should not be infringed upon"],
+    color: ["#2a9d8f", "#e9c46a"],
     nextq: ["q16", "q17"],
-    results: ["none", "none"]
+    results: ["none", "none"],
+    prevq: "q13"
   },
 
   q16: {
     qtext: "Is the existence of voluntary slavery possible?",
-    btn1: "Impossible; it is an oxymoron",
-    btn2: "It is possible through a contract",
-    color1: "#918868",
-    color2: "#347fc4",
-    prevq: "q15",
+    btn: ["No, it is an oxymoron", "Yes, it is possible through a contract"],
+    color: ["#918868", "#347fc4"],
     nextq: ["none", "none"],
-    results: ["mfriedman", "nozick"]
+    results: ["mfriedman", "nozick"],
+    prevq: "q15"
   },
 
   q17: {
     qtext: "What is your position on cultural issues?",
-    btn1: "Conservative",
-    btn2: "Progressive",
-    color1: "#29335c",
-    color2: "#7da64e",
-    prevq: "q15",
+    btn: ["Conservative", "Progressive"],
+    color: ["#29335c", "#7da64e"],
     nextq: ["q18", "none"],
-    results: ["none", "garyjohnson"]
+    results: ["none", "garyjohnson"],
+    prevq: "q15"
   },
 
   q18: {
     qtext: "What is your opinion on capital punishment (the death penalty)?",
-    btn1: "It should be used for some crimes",
-    btn2: "It should be abolished",
-    color1: "#463f3a",
-    color2: "#c36346",
-    prevq: "q17",
+    btn: ["It should be used for some crimes", "It should be abolished"],
+    color: ["#463f3a", "#c36346"],
     nextq: ["none", "q19"],
-    results: ["korwin", "none"]
+    results: ["korwin", "none"],
+    prevq: "q17"
   },
 
   q19: {
-    qtext: "In most, if not all cases, foreign intervention is wrong, if it's not defensive.",
-    btn1: "Agree",
-    btn2: "Disagree",
-    color1: "#f0c808",
-    color2: "#f44174",
-    prevq: "q18",
+    qtext: "In most, if not all cases, foreign intervention is wrong if it's not defensive.",
+    btn: ["Agree", "Disagree"],
+    color: ["#f0c808", "#f44174"],
     nextq: ["q20", "none"],
-    results: ["none", "randpaul"]
+    results: ["none", "randpaul"],
+    prevq: "q18"
   },
 
   q20: {
-    qtext: "In the current system, should immigration be expanded?",
-    btn1: "Yes",
-    btn2: "No",
-    color1: "#59c9a5",
-    color2: "#1a8fe3",
-    prevq: "q19",
+    qtext: "In the short term, should immigration be expanded?",
+    btn: ["Yes", "No"],
+    color: ["#59c9a5", "#1a8fe3"],
     nextq: ["none", "none"],
-    results: ["amash", "ronpaul"]
+    results: ["amash", "ronpaul"],
+    prevq: "q19"
   },
 
   q21: {
     qtext: "Which label do you self-identify more with?",
-    btn1: "Anarchist, without adjectives",
-    btn2: "Anarcho-Capitalist",
-    color1: "#242423",
-    color2: "#d39e0d",
+    btn: ["Anarchist, without adjectives", "Anarcho-Capitalist"],
+    color: ["#242423", "#d39e0d"],
     nextq: ["none", "q22"],
-    results: ["malice", "none"]
+    results: ["malice", "none"],
+    prevq: "q14"
   },
 
   q22: {
     qtext: "Ideally, what should be done to the state?",
-    btn1: "Remove its monopoly on violence and make it voluntary",
-    btn2: "Completely dismantle and abolish it",
-    color1: "#7a7d7d",
-    color2: "#565254",
-    prevq: "q21",
+    btn: ["Turn it into a voluntary government", "Completely abolish it"],
+    color: ["#7a7d7d", "#565254"],
     nextq: ["none", "q23"],
-    results: ["voluntaryism", "none"]
+    results: ["voluntaryism", "none"],
+    prevq: "q21"
   },
 
   q23: {
     qtext: "What should be the primary reason for the aboolition of the state?",
-    btn1: "A statist society is inefficient",
-    btn2: "The state, by definition, violates the rights of its subjects",
-    color1: "#5c826a",
-    color2: "#9e8e31",
-    prevq: "q22",
+    btn: ["A statist society is inefficient", "The existence of the state is unethical"],
+    color: ["#5c826a", "#9e8e31"],
     nextq: ["none", "q24"],
-    results: ["dfriedman", "none"]
+    results: ["dfriedman", "none"],
+    prevq: "q22"
   },
 
   q24: {
     qtext: "Does a fetus posses the natural rights that humans have?",
-    btn1: "Yes",
-    btn2: "No",
-    color1: "#222e50",
-    color2: "#007991",
-    prevq: "q23",
+    btn: ["Yes", "No"],
+    color: ["#222e50", "#007991"],
     nextq: ["q25", "none"],
-    results: ["none", "rothbard"]
+    results: ["none", "rothbard"],
+    prevq: "q23"
   },
 
   q25: {
     qtext: "Does a mother have the right to \"evict\" a fetus out of her womb, even if the fetus might not survive as a result?",
-    btn1: "Yes",
-    btn2: "No",
-    color1: "#29524a",
-    color2: "#aa8974",
-    prevq: "q24",
+    btn: ["Yes", "No"],
+    color: ["#29524a", "#aa8974"],
     nextq: ["block", "none"],
-    results: ["none", "q26"]
+    results: ["none", "q26"],
+    prevq: "q24"
   },
 
   q26: {
-    qtext: "Which political system is less worse?",
-    btn1: "Absolute Monarchy",
-    btn2: "Liberal Democracy",
-    color1: "#5f0f40",
-    color2: "#0f4c5c",
-    prevq: "q25",
+    qtext: "Which political system is the lesser evil?",
+    btn: ["Absolute Monarchy", "Liberal Democracy"],
+    color: ["#5f0f40", "#0f4c5c"],
     nextq: ["none", "none"],
-    results: ["hoppe", "woods"]
+    results: ["hoppe", "woods"],
+    prevq: "q25"
   }
 };
