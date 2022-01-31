@@ -30,10 +30,12 @@
 <script>
     var current_question = "q01"
     
+    window.onload = function() {
+        function init_question(current_question);
+   };
+    
     function init_question(current_question) {
         //Hide Button 3, Show Button 2
-        document.getElementById("button3").style.display = "none";
-        document.getElementById("button4").style.display = "none";
         document.getElementById("btn1div").style.display = "block";
         document.getElementById("btn2div").style.display = "block";
         //Change Question, Buttons Text
