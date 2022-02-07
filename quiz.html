@@ -47,8 +47,8 @@
         document.getElementById("button1").style.backgroundColor = questions[current_question].color[0];
         document.getElementById("button2").style.backgroundColor = questions[current_question].color[1];
 
-        $("#button1").on("click", function() { next_question(current_question, 0); });
-        $("#button2").on("click", function() { next_question(current_question, 1); });
+        $("#button1").on("click", function() { next_question(current_question, "0"); });
+        $("#button2").on("click", function() { next_question(current_question, "1"); });
     }
 
     /* function next_question(name, number) {
