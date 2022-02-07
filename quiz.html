@@ -49,13 +49,24 @@
         $("#button2").on("click", function() { next_question(current_question, 1); });
     }
 
-    function next_question(name, number) {
+    /* function next_question(name, number) {
         if (questions[name].results[number] === "none") {
             current_question = questions[name].nextq[number];
             init_question(current_question);
         } else {
             var resultsID = questions[name].results[number];
             location.href = `results.html` + `?id=${resultsID}`;
+        }
+    } */
+ 
+ 
+    function next_question(name, number) {
+        if (questions[name].nextq[number] === "none") {
+            var resultsID = questions[name].results[number];
+            location.href = `results.html` + `?id=${resultsID}`;
+        } else {
+            var current_question = questions[name].nextq[number];
+            init_question(current_question);
         }
     }
 
