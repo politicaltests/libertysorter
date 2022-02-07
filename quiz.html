@@ -23,8 +23,8 @@
 
 <p class="question" id="question-text">You will be presented with a series of questions or statements. For each one, click the button with the view that most suits yours.</p>
 
-<div id="btn1div" style="display: none;"><button class="button" style="background-color: #D2691E;" id="button1">-</button> <br></div>
-<div id="btn2div" style="display: none;"><button class="button" style="background-color: #D2691E;" id="button2">-</button> <br></div>
+<!-- <div id="btn1div" style="display: none;">--> <button class="button" style="background-color: #D2691E; display: none;" id="button1">-</button> <br><!-- </div> -->
+<!-- <div id="btn2div" style="display: none;">--> <button class="button" style="background-color: #D2691E; display: none;" id="button2">-</button> <br><!-- </div> -->
 <button class="button" onclick="init_question(current_question)" style="background-color: #8B0000;" id="button3">Proceed to Test</button> <br>
 <button class="button" onclick="location.href='https://politicaltests.github.io/libertysorter/'" style="background-color: #B22222;" id="button4">Back</button> <br>
 
@@ -35,8 +35,8 @@
         //Hide Button 3, Show Button 2
         document.getElementById("button3").style.display = "none";
         document.getElementById("button4").style.display = "none";
-        document.getElementById("btn1div").style.display = "block";
-        document.getElementById("btn2div").style.display = "block";
+        document.getElementById("button1").style.display = "block";
+        document.getElementById("button2").style.display = "block"; 
         //Change Question, Buttons Text
         document.getElementById("question-text").innerHTML = questions[current_question].qtext;
         document.getElementById("button1").innerHTML = questions[current_question].btn[0];
