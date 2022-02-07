@@ -39,8 +39,8 @@ const questions = {
     qtext: "What should the economy primarily focus on?",
     btn: ["Agriculture", "Industry"],
     color: ["#f2cd5d", "#6c7d47"],
-    nextq: ["none", "q06"],
-    results: ["jeffersonian", "none"],
+    nextq: ["sample_text", "q06"],
+    results: ["jeffersonian", "sample_text"],
     prevq: "q04"
   },
 
