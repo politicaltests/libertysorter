@@ -35,12 +35,12 @@ const questions = {
     prevq: "q03"
   },
 
-  q05: {
+  q05: { //Buggy
     qtext: "What should the economy primarily focus on?",
     btn: ["Agriculture", "Industry"],
     color: ["#f2cd5d", "#6c7d47"],
-    nextq: ["sample_text", "q06"],
-    results: ["jeffersonian", "sample_text"],
+    nextq: ["none", "q06"],
+    results: ["jeffersonian", "none"],
     prevq: "q04"
   },
 
@@ -89,7 +89,7 @@ const questions = {
     prevq: "q02"
   },
 
-  q11: {
+  q11: { //Buggy
     qtext: "What should be the primary source of knowledge?",
     btn: ["Rational Thinking", "Sensory Experience"],
     color: ["#053b06", "#0b5d1e"],
