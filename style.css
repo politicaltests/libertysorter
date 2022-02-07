@@ -118,6 +118,7 @@ img.values {
     display: block;
     font-size: 24pt;
     margin: -2px auto;
+    margin-bottom: 20px;
     cursor: pointer;
 }
 
