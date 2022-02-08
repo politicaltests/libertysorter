@@ -125,7 +125,7 @@ const questions = {
     prevq: "q12"
   },
 
-  q15: {
+  q15: { //BUGGY
     qtext: "What is the best justification for the importance of liberty?",
     btn: ["Liberty is vital for an efficient society", "People have inalienable rights that should not be infringed upon"],
     color: ["#2a9d8f", "#e9c46a"],
