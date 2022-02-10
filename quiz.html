@@ -23,8 +23,8 @@
 
 <p class="question" id="question-text">You will be presented with a series of questions or statements. For each one, click the button with the view that most suits yours.</p>
 
-<button class="button" style="background-color: #D2691E; display: none;" id="button1">-</button>
-<button class="button" style="background-color: #D2691E; display: none;" id="button2">-</button>
+<button class="button" onclick="next_question(current_question, '0');" style="background-color: #D2691E; display: none;" id="button1">-</button>
+<button class="button" onclick="next_question(current_question, '1');" style="background-color: #D2691E; display: none;" id="button2">-</button>
 <button class="button" onclick="init_question(current_question)" style="background-color: #8B0000;" id="button3">Proceed to Test</button>
 <button class="button" onclick="location.href='https://politicaltests.github.io/libertysorter/'" style="background-color: #B22222;" id="button4">Back</button>
 
@@ -47,8 +47,8 @@
         document.getElementById("button1").style.backgroundColor = questions[current_question].color[0];
         document.getElementById("button2").style.backgroundColor = questions[current_question].color[1];
 
-        $("#button1").on("click", function() { next_question(current_question, "0"); });
-        $("#button2").on("click", function() { next_question(current_question, "1"); });
+        //$("#button1").on("click", function() { next_question(current_question, "0"); });
+        //$("#button2").on("click", function() { next_question(current_question, "1"); });
     }
 
     /* function next_question(name, number) {
@@ -64,7 +64,7 @@
  
     function next_question(name, number) {
         if (questions[name].nextq[number] === "none") {
-            resultsID = questions[name].results[number];
+            var resultsID = questions[name].results[number];
             console.log("results");
             //location.href = `results.html` + `?id=${resultsID}`;
         } 
