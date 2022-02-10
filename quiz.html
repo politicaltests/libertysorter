@@ -65,7 +65,8 @@
     function next_question(name, number) {
         if (questions[name].nextq[number] === "none") {
             var resultsID = questions[name].results[number];
-            location.href = `results.html` + `?id=${resultsID}`;
+            console.log("results");
+            //location.href = `results.html` + `?id=${resultsID}`;
         } 
         else if (questions[name].results[number] === "none") {
             //var current_question = questions[name].nextq[number];
