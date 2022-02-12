@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <head>
 <title>6Foundations</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -56,7 +55,7 @@
     function next_question(name, number) {
         if (questions[name]["nextq"][number] === "none") {
             var resultsID = questions[name]["results"][number];
-            console.log("results");
+            console.log(resultsID);
             //location.href = `results.html` + `?id=${resultsID}`;
         } else {
             var current_question = questions[name]["nextq"][number];
