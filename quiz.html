@@ -31,8 +31,8 @@
 <script>
     var current_question = "q01"
     
-    function init_question(current_question) {
-        console.log(current_question);
+    function init_question(name) {
+        console.log(name);
      
         //Hide Button 3, Show Button 2
         document.getElementById("button3").style.display = "none";
@@ -40,12 +40,12 @@
         document.getElementById("button1").style.display = "block";
         document.getElementById("button2").style.display = "block"; 
         //Change Question, Buttons Text
-        document.getElementById("question-text").innerHTML = questions[current_question].qtext;
-        document.getElementById("button1").innerHTML = questions[current_question].btn[0];
-        document.getElementById("button2").innerHTML = questions[current_question].btn[1];
+        document.getElementById("question-text").innerHTML = questions[name].qtext;
+        document.getElementById("button1").innerHTML = questions[name].btn[0];
+        document.getElementById("button2").innerHTML = questions[name].btn[1];
         //Change Background Color
-        document.getElementById("button1").style.backgroundColor = questions[current_question].color[0];
-        document.getElementById("button2").style.backgroundColor = questions[current_question].color[1];
+        document.getElementById("button1").style.backgroundColor = questions[name].color[0];
+        document.getElementById("button2").style.backgroundColor = questions[name].color[1];
 
         //$("#button1").on("click", function() { next_question(current_question, "0"); });
         //$("#button2").on("click", function() { next_question(current_question, "1"); });
