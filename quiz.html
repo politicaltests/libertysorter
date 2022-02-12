@@ -53,7 +53,7 @@
     }
  
     function next_question(name, number) {
-        if (questions[name]["nextq"][number] === "none") {
+        if (questions[name].nextq[number] === "none") {
             var resultsID = questions[name]["results"][number];
             console.log(resultsID);
             //location.href = `results.html` + `?id=${resultsID}`;
