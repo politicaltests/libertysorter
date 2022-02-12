@@ -48,8 +48,11 @@
         document.getElementById("button1").style.backgroundColor = questions[name].color[0];
         document.getElementById("button2").style.backgroundColor = questions[name].color[1];
 
-       $("#button1").on("click", function() { next_question(name, "0"); });
-       $("#button2").on("click", function() { next_question(name, "1"); });
+       //$("#button1").on("click", function() { next_question(name, "0"); });
+       //$("#button2").on("click", function() { next_question(name, "1"); });
+     
+       document.getElementById("button1").onclick = function() { next_question(name, "0"); };
+       document.getElementById("button2").onclick = function() { next_question(name, "1"); };
     }
  
     function next_question(name, number) {
