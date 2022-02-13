@@ -12,7 +12,7 @@ const questions = {
     qtext: "Which system of government is more compatible with the principles of liberty?",
     btn: ["Monarchy", "Republicanism / Democracy"],
     color: ["#595959", "#31081f"],
-    nextq: ["q03", "q10"],
+    nextq: ["q10", "q03"],
     results: ["none", "none"],
     prevq: "q01"
   },
