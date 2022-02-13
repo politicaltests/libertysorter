@@ -1,6 +1,6 @@
 const questions = {
   q01: {
-    qtext: "All crimes that are victimless, like drug consumption, are not crimes.",
+    qtext: "All crimes that are victimless, such as drug consumption, are not crimes.",
     btn: ["Agree", "Disagree"],
     color: ["#3772ff", "#df2935"],
     nextq: ["q12", "q02"],
@@ -9,8 +9,8 @@ const questions = {
   },
 
   q02: {
-    qtext: "Are monarchies contradictory to the principles of freedom and liberty?",
-    btn: ["Yes, they are", "No, not necessarily"],
+    qtext: "Which system of government is more compatible with the principles of liberty?",
+    btn: ["Monarchy", "Republicanism / Democracy"],
     color: ["#595959", "#31081f"],
     nextq: ["q03", "q10"],
     results: ["none", "none"],
@@ -18,7 +18,7 @@ const questions = {
   },
 
   q03: {
-    qtext: "Within a federal state, what should be the relationship between the federal government of a country, and its subdivisions?",
+    qtext: "In a federal state, what should be the relationship between the federal government of a country and its subdivisions?",
     btn: ["The Federal Government should be subsurvient to its subdivisions", "The Federal Government should have the ultimate authority"],
     color: ["#0f084b", "#006ba6"],
     nextq: ["none", "q04"],
@@ -35,7 +35,7 @@ const questions = {
     prevq: "q03"
   },
 
-  q05: { //Buggy
+  q05: {
     qtext: "What should the economy primarily focus on?",
     btn: ["Agriculture", "Industry"],
     color: ["#f2cd5d", "#6c7d47"],
@@ -45,7 +45,7 @@ const questions = {
   },
 
   q06: {
-    qtext: "Land should not be privately owned.",
+    qtext: "Land should not be a commodity to be bought and sold.",
     btn: ["Agree", "Disagree"],
     color: ["#3e5641", "#a24936"],
     nextq: ["none", "q07"],
@@ -54,7 +54,7 @@ const questions = {
   },
 
   q07: {
-    qtext: "How can the inherent value of a product be determined?",
+    qtext: "How can the objective value of goods be determined?",
     btn: ["By a sum of labor, profits, and expenditures", "It cannot be; value is subjective"],
     color: ["#5398be", "#dea54b"],
     nextq: ["none", "q08"],
