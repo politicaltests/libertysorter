@@ -1,235 +1,244 @@
 const questions = {
-  q01: {
+  victimless_crimes: {
     qtext: "All crimes that are victimless, such as drug consumption, are not crimes.",
     btn: ["Agree", "Disagree"],
     color: ["#3772ff", "#df2935"],
-    nextq: ["q12", "q02"],
+    nextq: ["statism", "govt_system"],
     results: ["none", "none"],
     prevq: "none"
   },
 
-  q02: {
+  govt_system: {
     qtext: "Which system of government is more compatible with the principles of liberty?",
     btn: ["Monarchy", "Republicanism / Democracy"],
     color: ["#595959", "#31081f"],
-    nextq: ["q10", "q03"],
+    nextq: ["monarchy", "federalism"],
     results: ["none", "none"],
-    prevq: "q01"
+    prevq: "victimless_crimes"
   },
 
-  q03: {
+  federalism: {
     qtext: "In a federal state, what should be the relationship between the federal government of a country and its subdivisions?",
     btn: ["The Federal Government should be subsurvient to its subdivisions", "The Federal Government should have the ultimate authority"],
     color: ["#0f084b", "#006ba6"],
-    nextq: ["none", "q04"],
+    nextq: ["none", "govt_power"],
     results: ["antifed", "none"],
-    prevq: "q02"
+    prevq: "govt_system"
   },
 
-  q04: {
+  govt_power: {
     qtext: "Ideally, how powerful should the central government be?",
     btn: ["Strong, in order to promote national unity", "Relatively weak, with limited power"],
     color: ["#0f084b", "#006ba6"],
-    nextq: ["none", "q05"],
+    nextq: ["none", "economy"],
     results: ["hamilton", "none"],
-    prevq: "q03"
+    prevq: "federalism"
   },
 
-  q05: {
+  economy: {
     qtext: "What should the economy primarily focus on?",
     btn: ["Agriculture", "Industry"],
     color: ["#f2cd5d", "#6c7d47"],
-    nextq: ["none", "q06"],
+    nextq: ["none", "land"],
     results: ["jeffersonian", "none"],
-    prevq: "q04"
+    prevq: "govt_power"
   },
 
-  q06: {
+  land: {
     qtext: "Land should not be a commodity to be bought and sold.",
     btn: ["Agree", "Disagree"],
     color: ["#3e5641", "#a24936"],
-    nextq: ["none", "q07"],
+    nextq: ["none", "value"],
     results: ["georgism", "none"],
-    prevq: "q05",
+    prevq: "economy",
   },
 
-  q07: {
+  value: {
     qtext: "How can the objective value of goods be determined?",
     btn: ["By a sum of labor, profits, and expenditures", "It cannot be; value is subjective"],
     color: ["#5398be", "#dea54b"],
-    nextq: ["none", "q08"],
+    nextq: ["none", "intervention"],
     results: ["adamsmith", "none"],
-    prevq: "q06"
+    prevq: "land"
   },
 
-  q08: {
+  intervention: {
     qtext: "Is it ideal for countries to intervene in other countries, in order to protect and preserve democracy abroad?",
     btn: ["Generally, yes", "No, in most, if not all cases"],
     color: ["#683257", "#716f71"],
-    nextq: ["none", "q09"],
+    nextq: ["none", "prohibition"],
     results: ["goldwater", "none"],
-    prevq: "q07"
+    prevq: "value"
   },
 
-  q09: {
-    qtext: "Are you against the prohibition of drugs and alcohol?",
+  prohibition: {
+    qtext: "Are you against both the prohibition of drugs and alcohol?",
     btn: ["Yes", "No"],
     color: ["#2d728f", "#f49e4c"],
     nextq: ["none", "none"],
     results: ["mises", "coolidge"],
-    prevq: "q08"
+    prevq: "intervention"
   },
 
-  q10: {
+  monarchy: {
     qtext: "Which type of monarchy is more preferable?",
     btn: ["Absolute Monarchy", "Constitutional Monarchy"],
     color: ["#593f62", "#5f7995"],
-    nextq: ["none", "q11"],
+    nextq: ["none", "knowledge"],
     results: ["voltaire", "none"],
-    prevq: "q02"
+    prevq: "govt_system"
   },
 
-  q11: { //Buggy
+  knowledge: {
     qtext: "What should be the primary source of knowledge?",
-    btn: ["Rational Thinking", "Sensory Experience"],
+    btn: ["Reason", "Sensory Experience"],
     color: ["#053b06", "#0b5d1e"],
     nextq: ["none", "none"],
     results: ["rosseau", "locke"],
-    prevq: "q10"
+    prevq: "monarchy"
   },
 
-  q12: {
+  statism: {
     qtext: "A state, defined as a monopoly on violence, should exist, so that the rights of life, liberty, and property can be protected.",
     btn: ["Agree", "Disagree"],
     color: ["#023c40", "#43281c"],
-    nextq: ["q13", "q14"],
+    nextq: ["charity", "counter-economics"],
     results: ["none", "none"],
-    prevq: "q01"
+    prevq: "victimless_crimes"
   },
 
-  q13: {
+  charity: {
     qtext: "Would it preferable if more people voluntarily gave charity to the unfortunate?",
     btn: ["Yes", "No"],
     color: ["#2a9d8f", "#e9c46a"],
-    nextq: ["q15", "none"],
+    nextq: ["ethics1", "none"],
     results: ["none", "aynrand"],
-    prevq: "q12"
+    prevq: "statism"
   },
 
-  q14: {
+  counter-economics: {
     qtext: "Is the usage of counter-economics (i.e. black and gray markets) the best method for a non-violet revolution against the state?",
     btn: ["Yes", "No"],
     color: ["#2e2532", "#4c6085"],
-    nextq: ["none", "q21"],
+    nextq: ["none", "capitalist"],
     results: ["agorism", "none"],
-    prevq: "q12"
+    prevq: "statism"
   },
 
-  q15: { //BUGGY
+  ethics1: {
     qtext: "What is the best justification for the importance of liberty?",
     btn: ["Liberty is vital for an efficient society", "People have inalienable rights that should not be infringed upon"],
     color: ["#2a9d8f", "#e9c46a"],
-    nextq: ["q16", "q17"],
+    nextq: ["voluntary_slavery", "social_justice"],
     results: ["none", "none"],
-    prevq: "q13"
+    prevq: "charity"
   },
 
-  q16: {
+  voluntary_slavery: {
     qtext: "Is the existence of voluntary slavery possible?",
     btn: ["No, it is an oxymoron", "Yes, it is possible through a contract"],
     color: ["#918868", "#347fc4"],
     nextq: ["none", "none"],
     results: ["mfriedman", "nozick"],
-    prevq: "q15"
+    prevq: "ethics1"
   },
 
-  q17: {
-    qtext: "What is your position on cultural issues?",
-    btn: ["Conservative", "Progressive"],
+  social_justice: {
+    qtext: "Is social justice a core part of Libertarianism?",
+    btn: ["Yes", "No"],
     color: ["#29335c", "#7da64e"],
-    nextq: ["q18", "none"],
+    nextq: ["capital_punishment", "none"],
     results: ["none", "garyjohnson"],
-    prevq: "q15"
+    prevq: "ethics1"
   },
 
-  q18: {
-    qtext: "What is your opinion on capital punishment (the death penalty)?",
-    btn: ["It should be used for some crimes", "It should be abolished"],
+  capital_punishment: {
+    qtext: "Do you support the usage of capital punishment on certain crimes?",
+    btn: ["Yes", "No"],
     color: ["#463f3a", "#c36346"],
-    nextq: ["none", "q19"],
+    nextq: ["none", "defensive_war"],
     results: ["korwin", "none"],
-    prevq: "q17"
+    prevq: "social_justice"
   },
 
-  q19: {
+  defensive_war: {
     qtext: "In most, if not all cases, foreign intervention is wrong if it's not defensive.",
     btn: ["Agree", "Disagree"],
     color: ["#f0c808", "#f44174"],
-    nextq: ["q20", "none"],
+    nextq: ["immigration", "none"],
     results: ["none", "randpaul"],
-    prevq: "q18"
+    prevq: "capital_punishment"
   },
 
-  q20: {
+  immigration: {
     qtext: "In the short term, should immigration be expanded?",
     btn: ["Yes", "No"],
     color: ["#59c9a5", "#1a8fe3"],
     nextq: ["none", "none"],
     results: ["amash", "ronpaul"],
-    prevq: "q19"
+    prevq: "defensive_war"
   },
 
-  q21: {
-    qtext: "Which label do you self-identify more with?",
-    btn: ["Anarchist, without adjectives", "Anarcho-Capitalist"],
-    color: ["#242423", "#d39e0d"],
-    nextq: ["none", "q22"],
-    results: ["malice", "none"],
-    prevq: "q14"
+  capitalist: {
+    qtext: "Are you a Capitalist?",
+    btn: ["Yes", "No"],
+    color: ["#d39e0d", "#242423"],
+    nextq: ["anarchism", "none"],
+    results: ["none", "malice"],
+    prevq: "counter-economics"
   },
 
-  q22: {
+  voluntary_state: {
     qtext: "Ideally, what should be done to the state?",
     btn: ["Turn it into a voluntary government", "Completely abolish it"],
     color: ["#7a7d7d", "#565254"],
-    nextq: ["none", "q23"],
+    nextq: ["none", "anarchism"],
     results: ["voluntaryism", "none"],
-    prevq: "q21"
+    prevq: "capitalist"
   },
 
-  q23: {
-    qtext: "What should be the primary reason for the aboolition of the state?",
-    btn: ["A statist society is inefficient", "The existence of the state is unethical"],
+  anarchism: {
+    qtext: "Do you self-identify as an Anarchist?",
+    btn: ["Yes", "No"],
+    color: ["#d39e0d", "#242423"],
+    nextq: ["ethics2", "none"],
+    results: ["none", "autarchism"],
+    prevq: "voluntary_state"
+  },
+
+  ethics2: {
+    qtext: "What should be the primary reason for the abolition of the state?",
+    btn: ["Stateless societies are more efficient", "The existence of the state violates natural rights"],
     color: ["#5c826a", "#9e8e31"],
-    nextq: ["none", "q24"],
+    nextq: ["none", "abortion"],
     results: ["dfriedman", "none"],
-    prevq: "q22"
+    prevq: "voluntary_state"
   },
 
-  q24: {
+  abortion: {
     qtext: "Does a fetus posses the natural rights that humans have?",
     btn: ["Yes", "No"],
     color: ["#222e50", "#007991"],
-    nextq: ["q25", "none"],
+    nextq: ["blockian_proviso", "none"],
     results: ["none", "rothbard"],
-    prevq: "q23"
+    prevq: "ethics2"
   },
 
-  q25: {
-    qtext: "Does a mother have the right to \"evict\" a fetus out of her womb, even if the fetus might not survive as a result?",
+  blockian_proviso: {
+    qtext: "If a piece of property is necessary for people to use in order to get to a piece of unowned land, do people have a right to cross over that property?",
     btn: ["Yes", "No"],
     color: ["#29524a", "#aa8974"],
     nextq: ["block", "none"],
-    results: ["none", "q26"],
-    prevq: "q24"
+    results: ["none", "covenant_communities"],
+    prevq: "abortion"
   },
 
-  q26: {
-    qtext: "Which political system is the lesser evil?",
+  covenant_communities: {
+    qtext: "Should society consist of a variety of voluntary 'covenant communities' (communities with agreements that define the rules of that community) ?",
     btn: ["Absolute Monarchy", "Liberal Democracy"],
     color: ["#5f0f40", "#0f4c5c"],
     nextq: ["none", "none"],
     results: ["hoppe", "woods"],
-    prevq: "q25"
+    prevq: "blockian_proviso"
   }
 };
