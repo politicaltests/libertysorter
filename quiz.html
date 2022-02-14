@@ -61,7 +61,7 @@
             console.log(resultsID);
             //location.href = `results.html` + `?id=${resultsID}`;
         } else {
-            current_question = questions[current_question].nextq[number];
+            var current_question = questions[current_question].nextq[number];
             init_question();
             //init_question(questions[name].nextq[number]);
         }
