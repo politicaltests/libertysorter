@@ -25,15 +25,15 @@
 
 <button class="button" style="background-color: #D2691E; display: none;" id="button1">-</button>
 <button class="button" style="background-color: #D2691E; display: none;" id="button2">-</button>
-<button class="button" onclick="init_question()" style="background-color: #8B0000;" id="button3">Proceed to Test</button>
+<button class="button" onclick="init_question('victimless_crimes')" style="background-color: #8B0000;" id="button3">Proceed to Test</button>
 <button class="button" onclick="location.href='https://politicaltests.github.io/libertysorter/'" style="background-color: #B22222;" id="button4">Back</button>
 
 <script type="application/javascript" src="questions.js"></script>
 <script>
     var current_question = "victimless_crimes";
  
-    function init_question() {
-        console.log(current_question);
+    function init_question(name) {
+        console.log(name);
      
         //Hide Button 3, Show Button 2
         document.getElementById("button3").style.display = "none";
@@ -41,19 +41,16 @@
         document.getElementById("button1").style.display = "block";
         document.getElementById("button2").style.display = "block"; 
         //Change Question, Buttons Text
-        document.getElementById("question-text").innerHTML = questions[current_question].qtext;
-        document.getElementById("button1").innerHTML = questions[current_question].btn[0];
-        document.getElementById("button2").innerHTML = questions[current_question].btn[1];
+        document.getElementById("question-text").innerHTML = questions[name].qtext;
+        document.getElementById("button1").innerHTML = questions[name].btn[0];
+        document.getElementById("button2").innerHTML = questions[name].btn[1];
         //Change Background Color
-        document.getElementById("button1").style.backgroundColor = questions[current_question].color[0];
-        document.getElementById("button2").style.backgroundColor = questions[current_question].color[1];
-
-       //$("#button1").on("click", function() { next_question(name, "0"); });
-       //$("#button2").on("click", function() { next_question(name, "1"); });
+        document.getElementById("button1").style.backgroundColor = questions[name].color[0];
+        document.getElementById("button2").style.backgroundColor = questions[name].color[1];
     }
  
-    document.getElementById("button1").onclick = function() { next_question(/*current_question,*/ "0"); };
-    document.getElementById("button2").onclick = function() { next_question(/*current_question,*/ "1"); };
+    document.getElementById("button1").onclick = function() { next_question("0"); };
+    document.getElementById("button2").onclick = function() { next_question("1"); };
  
     function next_question(number) {
         if (questions[current_question].nextq[number] === "none") {
@@ -62,7 +59,7 @@
             //location.href = `results.html` + `?id=${resultsID}`;
         } else {
             var current_question = questions[current_question].nextq[number];
-            init_question();
+            init_question(current_question);
             //init_question(questions[name].nextq[number]);
         }
     }
