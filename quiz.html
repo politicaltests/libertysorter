@@ -30,8 +30,8 @@
 
 <script type="application/javascript" src="questions.js"></script>
 <script>
-    var current_question = "victimless_crimes";
- 
+    var current_question = "victimless_crimes"
+    
     function init_question(name) {
         console.log(name);
      
@@ -47,18 +47,21 @@
         //Change Background Color
         document.getElementById("button1").style.backgroundColor = questions[name].color[0];
         document.getElementById("button2").style.backgroundColor = questions[name].color[1];
+
+       //$("#button1").on("click", function() { next_question(name, "0"); });
+       //$("#button2").on("click", function() { next_question(name, "1"); });
     }
  
-    document.getElementById("button1").onclick = function() { next_question("0", current_question); };
-    document.getElementById("button2").onclick = function() { next_question("1", current_question); };
+    document.getElementById("button1").onclick = function() { next_question(/*current_question,*/ "0"); };
+    document.getElementById("button2").onclick = function() { next_question(/*current_question,*/ "1"); };
  
-    function next_question(number, name) {
-        if (questions[name].nextq[number] === "none") {
-            var resultsID = questions[name]["results"][number];
+    function next_question(number) {
+        if (questions[current_question].nextq[number] === "none") {
+            var resultsID = questions[current_question]["results"][number];
             console.log(resultsID);
             //location.href = `results.html` + `?id=${resultsID}`;
         } else {
-            var current_question = questions[name].nextq[number];
+            current_question = questions[current_question].nextq[number];
             init_question(current_question);
             //init_question(questions[name].nextq[number]);
         }
