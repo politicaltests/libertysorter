@@ -102,7 +102,7 @@ const questions = {
     qtext: "A state, defined as a monopoly on violence, should exist, so that the rights of life, liberty, and property can be protected.",
     btn: ["Agree", "Disagree"],
     color: ["#023c40", "#43281c"],
-    nextq: ["charity", "counter-economics"],
+    nextq: ["charity", "counter_economics"],
     results: ["none", "none"],
     prevq: "victimless_crimes"
   },
@@ -116,7 +116,7 @@ const questions = {
     prevq: "statism"
   },
 
-  counter-economics: {
+  counter_economics: {
     qtext: "Is the usage of counter-economics (i.e. black and gray markets) the best method for a non-violet revolution against the state?",
     btn: ["Yes", "No"],
     color: ["#2e2532", "#4c6085"],
@@ -185,7 +185,7 @@ const questions = {
     color: ["#d39e0d", "#242423"],
     nextq: ["anarchism", "none"],
     results: ["none", "malice"],
-    prevq: "counter-economics"
+    prevq: "counter_economics"
   },
 
   voluntary_state: {
