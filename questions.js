@@ -110,7 +110,7 @@ const questions = {
   charity: {
     qtext: "Would it preferable if more people voluntarily gave charity to the unfortunate?",
     btn: ["Yes", "No"],
-    color: ["#2a9d8f", "#e9c46a"],
+    color: ["#1d8348", "#d4ac0d "],
     nextq: ["ethics1", "none"],
     results: ["none", "aynrand"],
     prevq: "statism"
@@ -129,18 +129,9 @@ const questions = {
     qtext: "What is the best justification for the importance of liberty?",
     btn: ["Liberty is vital for an efficient society", "People have inalienable rights that should not be infringed upon"],
     color: ["#2a9d8f", "#e9c46a"],
-    nextq: ["voluntary_slavery", "social_justice"],
-    results: ["none", "none"],
+    nextq: ["none", "social_justice"],
+    results: ["mfriedman", "none"],
     prevq: "charity"
-  },
-
-  voluntary_slavery: {
-    qtext: "Is the existence of voluntary slavery possible?",
-    btn: ["No, it is an oxymoron", "Yes, it is possible through a contract"],
-    color: ["#918868", "#347fc4"],
-    nextq: ["none", "none"],
-    results: ["mfriedman", "nozick"],
-    prevq: "ethics1"
   },
 
   social_justice: {
