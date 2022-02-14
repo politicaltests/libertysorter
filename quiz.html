@@ -49,16 +49,16 @@
         document.getElementById("button2").style.backgroundColor = questions[name].color[1];
     }
  
-    document.getElementById("button1").onclick = function() { next_question("0"); };
-    document.getElementById("button2").onclick = function() { next_question("1"); };
+    document.getElementById("button1").onclick = function() { next_question("0", current_question); };
+    document.getElementById("button2").onclick = function() { next_question("1", current_question); };
  
-    function next_question(number) {
-        if (questions[current_question].nextq[number] === "none") {
-            var resultsID = questions[current_question]["results"][number];
+    function next_question(number, name) {
+        if (questions[name].nextq[number] === "none") {
+            var resultsID = questions[name]["results"][number];
             console.log(resultsID);
             //location.href = `results.html` + `?id=${resultsID}`;
         } else {
-            var current_question = questions[current_question].nextq[number];
+            var current_question = questions[name].nextq[number];
             init_question(current_question);
             //init_question(questions[name].nextq[number]);
         }
