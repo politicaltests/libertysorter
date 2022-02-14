@@ -117,14 +117,13 @@ img.values {
     text-decoration: none;
     display: block;
     font-size: 24pt;
-    margin: 10px auto;
+    margin: 10px auto 10px auto;
     cursor: pointer;
 }
 
 .button:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: 2px solid black;
-    margin: -4px auto;
 }  
 
 .small_button, .small_button_off {
@@ -180,158 +179,6 @@ span.weight-300 {
     font-weight: 300;
 }
 
-/* Charts */
-#donutChart {
-    /* margin-left: auto;
-    margin-right: auto; */
-    border-style: none;
-    max-width: 550px;
-    max-height: 600px;
-    margin: auto;
-}
-div.donutDiv {
- /*   display: inline-block;
-    width: 50%;*/
-    flex-basis: 50%;
-}
-#radarChart {
-    /* margin-left: auto;
-    margin-right: auto; */
-    border-style: none;
-    max-width: 550px;
-    max-height: 600px;
-    margin: auto;
-}
-div.radarDiv {
-   /* float: right;
-    display: inline-block;
-    width: 50%;*/
-    flex-basis: 50%;
-}
-
-#ChartDiv {
-    white-space: nowrap; 
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-/* Values */
-div.care {
-    background-color: #e06666;
-    text-align: left;
-    border-radius: 5px 0px 0px 5px;
-    margin-left: 8px;
-    color: #b03a2e; 
-}
-div.fairness {
-    background-color: #6aa84f;
-    text-align: left;
-    border-radius: 5px 0px 0px 5px;
-    margin-left: 8px;
-    color: #1e8449;
-}
-div.loyalty {
-    background-color: #8e7cc3;
-    text-align: left;
-    border-radius: 5px 0px 0px 5px;
-    margin-left: 8px;
-    color: #6c3483;
-}
-div.authority {
-    background-color: #1c4587;
-    text-align: left;
-    border-radius: 5px 0px 0px 5px;
-    margin-left: 8px;
-    color: #3472d5;
-}
-div.sanctity {
-    background-color: #de8a52;
-    text-align: left;
-    border-radius: 5px 0px 0px 5px;
-    margin-left: 8px;
-    color: #af601a;
-}
-div.liberty {
-    background-color: #f1c232;
-    text-align: left;
-    border-radius: 5px 0px 0px 5px;
-    margin-left: 8px;
-    color: #b7950b;
-}
-div.nocare, div.nofair, div.noloyal, div.noauth, div.nosanc, div.nolib {
-    background-color: #A9A9A9;
-    text-align: right;
-    border-left-style: none;
-    border-radius: 0px 5px 5px 0px;
-    color: rgba(0, 0, 0, 0);
-}
-span.weight-300 {
-    font-weight: 300;
-}
-canvas:not(#donutChart, #radarChart) {
-    border-color: #444444;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 8pt;
-    display: block;
-    margin: 8pt;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: -1%;
-    min-width: 20%;
-    max-width: 50%;
-}
-
-/* TOOLTIP */
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 300px;
-  background-color: #555;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -150px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-  margin: 0 auto;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
-
-p.tool {
-   color: #333333;
-   font-family: 'Montserrat', sans-serif;
-   display: flex;
-   text-align: center;
-}
-
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -357,18 +204,6 @@ p.tool {
   font-feature-settings: 'liga';
 }
 
-@media only screen and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  #ChartDiv {
-      overflow: visible;
-      max-height: none;
-  },
-  .donutDiv, .radarDiv {
-     /* clear: both;
-      display: block;
-      width: 100%;*/
-      flex-basis: 100%;
-      margin: auto;
-  }
 @media only screen and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2) {
   body {
     width: auto;
