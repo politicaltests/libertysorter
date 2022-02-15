@@ -1,9 +1,9 @@
 const questions = {
   victimless_crimes: {
-    qtext: "All crimes that are victimless, such as drug consumption, are not crimes.",
-    btn: ["Agree", "Disagree"],
+    qtext: "Should crimes that are victimless, such as drug consumption, be crimes?",
+    btn: ["Yes", "No"],
     color: ["#3772ff", "#df2935"],
-    nextq: ["statism", "govt_system"],
+    nextq: ["govt_system", "statism"],
     results: ["none", "none"],
     prevq: "none"
   },
@@ -128,18 +128,18 @@ const questions = {
   ethics1: {
     qtext: "What is the best justification for the importance of liberty?",
     btn: ["Liberty is vital for an efficient society", "People have inalienable rights that should not be infringed upon"],
-    color: ["#2a9d8f", "#e9c46a"],
+    color: ["#51513D", "#FF8811"],
     nextq: ["none", "social_justice"],
     results: ["mfriedman", "none"],
     prevq: "charity"
   },
 
   social_justice: {
-    qtext: "Is social justice a core part of Libertarianism?",
+    qtext: "Is social justice a core and inherent part of Libertarianism?",
     btn: ["Yes", "No"],
     color: ["#29335c", "#7da64e"],
-    nextq: ["capital_punishment", "none"],
-    results: ["none", "garyjohnson"],
+    nextq: ["none", "capital_punishment"],
+    results: ["garyjohnson", "none"],
     prevq: "ethics1"
   },
 
